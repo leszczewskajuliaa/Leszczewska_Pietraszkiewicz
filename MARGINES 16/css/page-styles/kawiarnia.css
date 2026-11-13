@@ -1,0 +1,650 @@
+/* MARGINES — style podstrony kawiarnia.html */
+/* Styl przeniesiony z kawiarnia.html */
+/* MIĘKKI, PRZYJAZNY WYGLĄD — podstrona Kawiarnia + sklep z kawą */
+
+body[data-page="kawiarnia"] .m-eyebrow {
+  letter-spacing: 0.14em;
+  font-weight: 600;
+  color: #8a6a52;
+}
+
+body[data-page="kawiarnia"] main {
+  background: linear-gradient(180deg, #fbf5ec 0%, #f7efe3 100%);
+}
+
+body[data-page="kawiarnia"] h1.m-display::after,
+body[data-page="kawiarnia"] #menu-h::after,
+body[data-page="kawiarnia"] #shop-h::after {
+  content: "";
+  display: block;
+  width: 48px;
+  height: 4px;
+  margin-top: 16px;
+  background: #d9a46b;
+  border-radius: 999px;
+}
+
+body[data-page="kawiarnia"] h1.m-display,
+body[data-page="kawiarnia"] h2 {
+  font-weight: 600;
+}
+
+/* --- Plakietka "otwarte / zamknięte" --- */
+
+.m-open {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin: 8px 0 0;
+  padding: 9px 18px;
+  border-radius: 999px;
+  background: #f1e6d8;
+  color: #4a3224;
+  font-size: 0.88rem;
+  font-weight: 600;
+  box-shadow: 0 2px 6px rgba(80, 56, 39, 0.06);
+}
+
+.m-open .dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #9a8b7d;
+}
+
+.m-open.is-open .dot {
+  background: #6a9a4f;
+  box-shadow: 0 0 0 0 rgba(106, 154, 79, 0.6);
+  animation: m-live 2s ease-out infinite;
+}
+
+@keyframes m-live {
+  0% { box-shadow: 0 0 0 0 rgba(106, 154, 79, 0.55); }
+  100% { box-shadow: 0 0 0 12px rgba(106, 154, 79, 0); }
+}
+
+/* --- Zdjęcia --- */
+
+body[data-page="kawiarnia"] .m-img {
+  border-radius: 22px;
+  object-fit: cover;
+  box-shadow: 0 8px 28px rgba(80, 56, 39, 0.14);
+}
+
+/* --- Menu: miękkie karty z listami --- */
+
+body[data-page="kawiarnia"] .m-list {
+  background: #fffaf4;
+  border-radius: 22px;
+  padding: 0.4rem 1.6rem;
+  box-shadow: 0 4px 16px rgba(80, 56, 39, 0.08);
+}
+
+body[data-page="kawiarnia"] .m-list .list-group-item {
+  border-color: rgba(80, 56, 39, 0.1);
+  transition: padding-left 0.2s ease, color 0.2s ease;
+}
+
+body[data-page="kawiarnia"] .m-list .list-group-item:last-child {
+  border-bottom: 0;
+}
+
+body[data-page="kawiarnia"] .m-list .list-group-item:first-child {
+  border-top: 0;
+}
+
+body[data-page="kawiarnia"] .m-list .list-group-item:hover {
+  padding-left: 0.5rem;
+  color: #8a5a35;
+}
+
+/* --- Sekcja "Atmosfera / Informacje" jako miękki panel --- */
+
+body[data-page="kawiarnia"] section.m-section {
+  border-top: 0;
+  border-radius: 30px;
+  padding: 3.5rem 2.5rem;
+  background: linear-gradient(180deg, #fffaf4 0%, #f7efe3 100%);
+  box-shadow: 0 4px 20px rgba(80, 56, 39, 0.07);
+}
+
+body[data-page="kawiarnia"] .m-fict {
+  border: 0;
+  border-radius: 999px;
+  background: #f1e6d8;
+  padding: 0.45rem 1rem;
+}
+
+/* ============================================= */
+/* SKLEP Z KAWĄ                                  */
+/* ============================================= */
+
+.m-shop {
+  border-radius: 30px;
+  padding: 3.5rem 2.5rem;
+  background:
+    radial-gradient(circle at 8% 0%, rgba(217, 164, 107, 0.22), transparent 45%),
+    linear-gradient(180deg, #fffaf4 0%, #f3e6d3 100%);
+  box-shadow: 0 6px 24px rgba(80, 56, 39, 0.09);
+  position: relative;
+  overflow: hidden;
+}
+
+.m-shop .lead-in {
+  max-width: 36rem;
+}
+
+/* wybór nastroju */
+
+.m-mood {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 1.6rem 0 0.8rem;
+}
+
+.m-mood button {
+  border: 1px solid transparent;
+  background: #fffaf4;
+  color: #4a3224;
+  border-radius: 999px;
+  padding: 10px 20px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  box-shadow: 0 2px 8px rgba(80, 56, 39, 0.08);
+  transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease, color 0.2s ease;
+}
+
+.m-mood button:hover {
+  background: #f1e6d8;
+  transform: translateY(-2px);
+}
+
+.m-mood button[aria-pressed="true"] {
+  background: #322116;
+  color: #fffaf4;
+  box-shadow: 0 6px 16px rgba(50, 33, 22, 0.25);
+}
+
+.m-mood-msg {
+  min-height: 1.6em;
+  margin: 0 0 1.6rem;
+  color: #6b5442;
+  font-size: 0.95rem;
+}
+
+/* karty kaw */
+
+.m-shop-card {
+  display: flex;
+  flex-direction: column;
+  background: #fffaf4;
+  border-radius: 22px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(80, 56, 39, 0.1);
+  transition: transform 0.35s cubic-bezier(0.2, 0.7, 0.2, 1), box-shadow 0.35s ease, opacity 0.35s ease, filter 0.35s ease;
+}
+
+.m-shop-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 32px rgba(45, 30, 20, 0.16);
+}
+
+.m-shop-card.is-pick {
+  transform: translateY(-8px);
+  box-shadow: 0 0 0 3px #d9a46b, 0 18px 36px rgba(45, 30, 20, 0.2);
+}
+
+.m-shop-card.is-dim {
+  opacity: 0.5;
+  filter: saturate(0.6);
+}
+
+.m-shop-photo {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+  background: #ead9c4;
+}
+
+.m-shop-photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.7s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+.m-shop-card:hover .m-shop-photo img {
+  transform: scale(1.07);
+}
+
+.m-shop-tag,
+.m-shop-pick {
+  position: absolute;
+  top: 12px;
+  padding: 5px 12px;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.m-shop-tag {
+  left: 12px;
+  background: rgba(255, 250, 244, 0.92);
+  color: #4a3224;
+}
+
+.m-shop-pick {
+  right: 12px;
+  background: #d9a46b;
+  color: #2b1a0f;
+  opacity: 0;
+  transform: translateY(-8px) scale(0.9);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.m-shop-card.is-pick .m-shop-pick {
+  opacity: 1;
+  transform: none;
+}
+
+.m-shop-body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 18px 20px 20px;
+}
+
+.m-shop-body h3 {
+  font-size: 1.2rem;
+  margin: 2px 0 6px;
+}
+
+.m-shop-notes {
+  margin: 0 0 14px;
+  color: #75665b;
+  font-size: 0.88rem;
+}
+
+.m-meter {
+  margin: 0 0 16px;
+  display: grid;
+  gap: 6px;
+}
+
+.m-meter > div {
+  display: grid;
+  grid-template-columns: 78px 1fr;
+  align-items: center;
+  font-size: 0.78rem;
+  color: #6b5442;
+}
+
+.m-meter dt {
+  font-weight: 600;
+}
+
+.m-meter dd {
+  margin: 0;
+  display: flex;
+  gap: 5px;
+}
+
+.m-meter i {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #ead9c4;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.m-meter i.on {
+  background: #a97851;
+}
+
+.m-shop-card:hover .m-meter i.on {
+  transform: scale(1.15);
+}
+
+.m-shop-body label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #8a6a52;
+  margin-bottom: 4px;
+}
+
+body[data-page="kawiarnia"] .m-shop-body .form-select {
+  border: 1px solid transparent;
+  background-color: #f1e6d8;
+  color: #3a271b;
+  border-radius: 999px;
+  min-height: 40px;
+  font-size: 0.88rem;
+  padding-left: 16px;
+}
+
+.m-shop-buy {
+  margin-top: auto;
+  padding-top: 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.m-shop-buy .price strong {
+  font-size: 1.45rem;
+  color: #322116;
+}
+
+.m-shop-buy .price span {
+  font-size: 0.8rem;
+  color: #75665b;
+  margin-left: 4px;
+}
+
+.m-shop-add,
+.m-set-add {
+  border: 0;
+  border-radius: 999px;
+  background: #322116;
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.88rem;
+  padding: 11px 20px;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.m-shop-add:hover {
+  background: #67442d;
+  transform: translateY(-2px);
+}
+
+/* zestaw degustacyjny */
+
+.m-set {
+  margin-top: 2.2rem;
+  border-radius: 26px;
+  padding: 2rem 2.2rem;
+  color: #fffaf4;
+  background: linear-gradient(135deg, #3a251a 0%, #5e3c28 100%);
+  box-shadow: 0 12px 32px rgba(45, 30, 20, 0.28);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.4rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.m-set::before,
+.m-set::after {
+  content: "";
+  position: absolute;
+  width: 190px;
+  height: 190px;
+  border-radius: 50%;
+  background: rgba(217, 164, 107, 0.14);
+  pointer-events: none;
+}
+
+.m-set::before { right: -50px; top: -70px; }
+.m-set::after { right: 120px; bottom: -110px; width: 150px; height: 150px; }
+
+.m-set > * { position: relative; z-index: 1; }
+
+.m-set h3 {
+  font-size: 1.5rem;
+  margin: 4px 0 6px;
+  color: #fffaf4;
+}
+
+.m-set p {
+  margin: 0;
+  max-width: 34rem;
+  color: #e8d6bf;
+  font-size: 0.95rem;
+}
+
+.m-set .m-eyebrow {
+  color: #d9a46b;
+}
+
+.m-set .m-set-price {
+  font-size: 1.9rem;
+  font-weight: 800;
+  margin-right: 14px;
+}
+
+.m-set-add {
+  background: #d9a46b;
+  color: #2b1a0f;
+  padding: 13px 26px;
+}
+
+.m-set-add:hover {
+  background: #f0bf85;
+  transform: translateY(-2px);
+}
+
+/* atuty */
+
+.m-perks {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.m-perk {
+  background: rgba(255, 250, 244, 0.75);
+  border-radius: 18px;
+  padding: 16px 18px;
+  font-size: 0.88rem;
+  color: #5a4535;
+}
+
+.m-perk strong {
+  display: block;
+  color: #322116;
+  margin-bottom: 2px;
+}
+
+/* przycisk w kartach i pozostałe */
+
+body[data-page="kawiarnia"] .btn {
+  border-radius: 999px;
+}
+
+/* wjeżdżanie sekcji */
+
+.m-reveal {
+  opacity: 0;
+  transform: translateY(26px);
+  transition: opacity 0.7s ease var(--d, 0ms), transform 0.7s cubic-bezier(0.2, 0.7, 0.2, 1) var(--d, 0ms);
+}
+
+.m-reveal.is-in {
+  opacity: 1;
+  transform: none;
+}
+
+/* ziarna po dodaniu do koszyka */
+
+.m-burst {
+  position: fixed;
+  z-index: 1200;
+  pointer-events: none;
+  width: 12px;
+  height: 8px;
+  border-radius: 50%;
+  background: #4a2c1a;
+}
+
+@media (max-width: 767.98px) {
+  .m-shop,
+  body[data-page="kawiarnia"] section.m-section {
+    padding: 2.2rem 1.25rem;
+    border-radius: 24px;
+  }
+
+  .m-perks {
+    grid-template-columns: 1fr;
+  }
+
+  .m-set {
+    padding: 1.6rem 1.4rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .m-reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .m-open.is-open .dot,
+  .m-shop-card,
+  .m-shop-photo img,
+  .m-meter i {
+    animation: none;
+    transition: none;
+  }
+}
+   /* Małe zdjęcia wypieków przy menu, bez dodatkowej sekcji */
+body[data-page="kawiarnia"] .m-sweet-label {
+  display: inline-flex; align-items: center; gap: 12px; min-width: 0;
+}
+body[data-page="kawiarnia"] .m-sweet-thumb {
+  width: 62px; height: 62px; flex: 0 0 62px; object-fit: cover;
+  border-radius: 12px; background: #eee1d1;
+  box-shadow: 0 3px 10px rgba(60,40,25,.10);
+}
+@media(max-width: 480px) {
+  body[data-page="kawiarnia"] .m-sweet-thumb { width: 48px; height: 48px; flex-basis: 48px; }
+}
+  
+/* Opisy wypieków obok miniatur */
+body[data-page="kawiarnia"] .m-sweet-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+}
+body[data-page="kawiarnia"] .m-sweet-name {
+  font-size: 0.95rem;
+  line-height: 1.35;
+  font-weight: 700;
+  color: #39291f;
+}
+body[data-page="kawiarnia"] .m-sweet-desc {
+  display: block;
+  max-width: 290px;
+  color: #806b5b;
+  font-size: 0.78rem;
+  line-height: 1.5;
+}
+body[data-page="kawiarnia"] .m-list li:has(.m-sweet-label) {
+  align-items: center;
+  gap: 14px;
+  padding-top: 13px;
+  padding-bottom: 13px;
+}
+body[data-page="kawiarnia"] .m-list li:has(.m-sweet-label) > span:last-child {
+  white-space: nowrap;
+  font-weight: 700;
+  color: #50392a;
+}
+@media (max-width: 480px) {
+  body[data-page="kawiarnia"] .m-sweet-desc { font-size: 0.73rem; }
+}
+    /* Wysuwana wyszukiwarka: niższy panel, bez zmiany jego szerokości. */
+    #m-search {
+      max-width: 400px !important;
+      height: auto !important;
+      min-height: 0 !important;
+      padding-top: 6px !important;
+      padding-bottom: 6px !important;
+      border-radius: 22px !important;
+      box-sizing: border-box;
+    }
+    #m-search input {
+      height: 36px !important;
+      min-height: 0 !important;
+      padding: 5px 12px !important;
+      border-radius: 14px !important;
+      box-sizing: border-box;
+    }
+    /* Wyszukiwarka rozwija się pod paskiem nawigacji,
+       dzięki czemu kategorie i koszyk pozostają widoczne. */
+    .m-nav { position: relative; }
+    .m-nav #m-search {
+      position: absolute !important;
+      right: 100px !important;
+      top: 100% !important;
+      left: auto !important;
+      transform: none !important;
+      z-index: 20;
+      width: min(400px, calc(100vw - 120px)) !important;
+    }
+    @media (max-width: 520px) {
+      .m-nav #m-search {
+        right: 100px !important;
+        width: min(260px, calc(100vw - 120px)) !important;
+      }
+    }
+    /* Lupa i koszyk zawsze przy prawej krawędzi paska nawigacji. */
+    .m-nav > .container-fluid > .d-flex.order-lg-3 {
+      margin-left: auto;
+      flex-shrink: 0;
+    }
+    /* Kompaktowa stopka: mniejsze odstępy i godziny blisko dni. */
+    .m-footer { padding-top: 32px !important; padding-bottom: 22px !important; }
+    .m-footer > .container > .row { --bs-gutter-y: 18px; }
+    .m-footer .m-eyebrow { margin-bottom: 12px; }
+    .m-footer .list-unstyled { margin-bottom: 0; }
+    .m-footer .list-unstyled li { padding-top: 3px !important; padding-bottom: 3px !important; }
+    .m-footer .m-footer-hours li {
+      display: grid !important;
+      grid-template-columns: 82px max-content;
+      justify-content: start !important;
+      column-gap: 12px;
+      align-items: baseline;
+    }
+    .m-footer .m-footer-hours li span:last-child { white-space: nowrap; }
+    .m-footer > .container > p:last-child { margin-top: 24px !important; padding-top: 12px; border-top: 1px solid rgba(255,255,255,.16); }
+    @media (max-width: 575px) {
+      .m-footer { padding-top: 26px !important; }
+      .m-footer .m-footer-hours li { grid-template-columns: 76px max-content; column-gap: 8px; }
+    }
+
+/* Styl przeniesiony z kawiarnia.html */
+/* Sprzedaż kaw wyłącznie stacjonarnie */
+.m-coffee-local-note { margin: 18px 0 22px; padding: 13px 16px; border-left: 3px solid #a97851; border-radius: 0 12px 12px 0; background: #f5eadb; color: #67442d; font-weight: 600; line-height: 1.5; }
+.m-only-local { display: inline-flex; align-items: center; justify-content: center; border-radius: 999px; background: #f1e6d8; color: #4a3224; font-size: .78rem; font-weight: 700; line-height: 1.35; padding: 9px 12px; text-align: center; }
+.m-only-local-light { background: #f6e5ce; color: #39251a; }
+.m-grind-info { font-size: .83rem; color: #75665b; margin: 12px 0 0; }
+@media(max-width: 440px) { .m-shop-buy { flex-wrap: wrap; } .m-only-local { max-width: 100%; } }
+
+.m-page-inline-1 { max-width:38rem !important; }
+
+.m-page-inline-2 { font-size:2.4rem !important; }
+
+.m-page-inline-3 { font-size:2.4rem !important; }
+
+.m-page-inline-4 { font-size:2.2rem !important; }
+
+.m-page-inline-5 { font-size:2.2rem !important; }
+
+.m-page-inline-6 { color:inherit !important; }
+
+.m-page-inline-7 { color:inherit !important; }
+
+.m-page-inline-8 { color:inherit !important; }
+
+.m-page-inline-9 { font-style:normal !important; }

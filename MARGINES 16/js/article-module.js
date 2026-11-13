@@ -1,0 +1,1 @@
+document.querySelectorAll('.journal-copy-link').forEach(button=>button.addEventListener('click',async()=>{const status=button.parentElement.querySelector('.journal-copy-feedback');try{await navigator.clipboard.writeText(location.href);status.textContent='Link skopiowany.'}catch(e){status.textContent='Skopiuj adres strony z paska przeglądarki.'}}));

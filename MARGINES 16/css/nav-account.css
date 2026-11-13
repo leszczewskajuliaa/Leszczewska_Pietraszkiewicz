@@ -1,0 +1,5 @@
+/* Ikona konta użytkownika w globalnej nawigacji */
+.m-nav .m-account-nav-link{display:inline-flex;align-items:center;justify-content:center;text-decoration:none;color:inherit;flex-shrink:0;vertical-align:middle}
+.m-nav .m-account-nav-link:hover{color:#a36a3d}
+.m-nav .m-account-nav-link:focus-visible{outline:3px solid #9a6237;outline-offset:3px;border-radius:8px}
+body[data-page="konto"] .m-nav .m-account-nav-link{color:#a36a3d}

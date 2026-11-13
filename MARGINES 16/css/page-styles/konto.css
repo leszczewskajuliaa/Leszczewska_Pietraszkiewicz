@@ -1,0 +1,28 @@
+/* MARGINES — style podstrony konto.html */
+/* Styl przeniesiony z konto.html */
+.m-footer { padding-top: 32px !important; padding-bottom: 22px !important; }
+    .m-footer > .container > .row { --bs-gutter-y: 18px; }
+    .m-footer .m-eyebrow { margin-bottom: 12px; }
+    .m-footer .list-unstyled { margin-bottom: 0; }
+    .m-footer .list-unstyled li { padding-top: 3px !important; padding-bottom: 3px !important; }
+    .m-footer .m-footer-hours li {
+      display: grid !important;
+      grid-template-columns: 82px max-content;
+      justify-content: start !important;
+      column-gap: 12px;
+      align-items: baseline;
+    }
+    .m-footer .m-footer-hours li span:last-child { white-space: nowrap; }
+    .m-footer > .container > p:last-child { margin-top: 24px !important; padding-top: 12px; border-top: 1px solid rgba(255,255,255,.16); }
+    @media (max-width: 575px) {
+      .m-footer { padding-top: 26px !important; }
+      .m-footer .m-footer-hours li { grid-template-columns: 76px max-content; column-gap: 8px; }
+    }
+
+.m-page-inline-1 { color:inherit !important; }
+
+.m-page-inline-2 { color:inherit !important; }
+
+.m-page-inline-3 { color:inherit !important; }
+
+.m-page-inline-4 { font-style:normal !important; }

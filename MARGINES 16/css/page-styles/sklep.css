@@ -1,0 +1,324 @@
+/* MARGINES — style podstrony sklep.html */
+/* Styl przeniesiony z sklep.html */
+/* MIĘKKI, PRZYJAZNY WYGLĄD — podstrona Książki (ten sam styl co strona główna) */
+
+body[data-page="ksiazki"] .m-eyebrow {
+  letter-spacing: 0.14em;
+  font-weight: 600;
+  color: #8a6a52;
+}
+
+body[data-page="ksiazki"] main {
+  background: linear-gradient(180deg, #fbf5ec 0%, #f7efe3 100%);
+}
+
+body[data-page="ksiazki"] h1.m-display {
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+body[data-page="ksiazki"] h1.m-display::after {
+  content: "";
+  display: block;
+  width: 48px;
+  height: 4px;
+  margin-top: 16px;
+  background: #d9a46b;
+  border-radius: 999px;
+}
+
+/* --- Wyszukiwarka --- */
+
+body[data-page="ksiazki"] .form-label {
+  color: #8a6a52;
+  font-weight: 600;
+}
+
+body[data-page="ksiazki"] #shop-q {
+  border: 1px solid transparent;
+  background: #f1e6d8;
+  color: #3a271b;
+  border-radius: 999px;
+  padding: 12px 20px;
+  box-shadow: 0 2px 6px rgba(80, 56, 39, 0.06);
+  transition: background 0.2s ease, box-shadow 0.2s ease;
+}
+
+body[data-page="ksiazki"] #shop-q::placeholder {
+  color: #8a7565;
+}
+
+body[data-page="ksiazki"] #shop-q:focus {
+  background: #fffaf4;
+  border-color: #d9a46b;
+  box-shadow: 0 0 0 4px rgba(217, 164, 107, 0.25);
+  outline: none;
+}
+
+/* --- Filtry kategorii jako miękkie "tabletki" --- */
+
+body[data-page="ksiazki"] .m-filter {
+  gap: 10px !important;
+}
+
+body[data-page="ksiazki"] .m-filter .btn {
+  border-radius: 999px;
+  padding: 9px 18px;
+  font-weight: 600;
+  transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+body[data-page="ksiazki"] .m-filter .btn-m-line {
+  background: #f1e6d8;
+  border: 1px solid transparent;
+  color: #4a3224;
+  box-shadow: 0 2px 6px rgba(80, 56, 39, 0.06);
+}
+
+body[data-page="ksiazki"] .m-filter .btn-m-line:hover {
+  background: #e8d3bb;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(80, 56, 39, 0.12);
+}
+
+body[data-page="ksiazki"] .m-filter .btn-m-dark {
+  box-shadow: 0 4px 10px rgba(50, 33, 22, 0.2);
+}
+
+body[data-page="ksiazki"] .m-filter .btn:focus-visible {
+  outline: 3px solid #d9a46b;
+  outline-offset: 3px;
+}
+
+/* --- Karty produktów --- */
+
+body[data-page="ksiazki"] .m-card {
+  border: 0;
+  border-radius: 20px;
+  background: #fffaf4;
+  padding: 10px;
+  box-shadow: 0 4px 16px rgba(80, 56, 39, 0.08);
+  overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+body[data-page="ksiazki"] .m-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(45, 30, 20, 0.12);
+}
+
+body[data-page="ksiazki"] .m-card > button {
+  display: block;
+  width: 100%;
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+body[data-page="ksiazki"] .m-card .m-cover {
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+body[data-page="ksiazki"] .m-card .card-body {
+  padding: 14px 8px 8px;
+}
+
+body[data-page="ksiazki"] .m-card .card-title {
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+/* Okrągły, ciepły przycisk "+" */
+
+body[data-page="ksiazki"] .m-card .m-icon-btn[data-add],
+body[data-page="ksiazki"] .m-card .m-icon-btn[disabled] {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: #f1e6d8;
+  color: #4a3224;
+  border: 0;
+  transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+body[data-page="ksiazki"] .m-card .m-icon-btn[data-add]:hover {
+  background: #a97851;
+  color: #fff;
+  transform: scale(1.08);
+}
+
+body[data-page="ksiazki"] .m-card .m-icon-btn[disabled] {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+/* --- Okienka (popupy) --- */
+
+.m-mini .m-cover {
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.btn.btn-m-dark {
+  border-radius: 999px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body[data-page="ksiazki"] .m-card,
+  body[data-page="ksiazki"] .m-filter .btn,
+  body[data-page="ksiazki"] #shop-q,
+  body[data-page="ksiazki"] .m-card .m-icon-btn {
+    transition: none;
+  }
+}
+
+    /* Wysuwana wyszukiwarka: niższy panel, bez zmiany jego szerokości. */
+    #m-search {
+      max-width: 400px !important;
+      height: auto !important;
+      min-height: 0 !important;
+      padding-top: 6px !important;
+      padding-bottom: 6px !important;
+      border-radius: 22px !important;
+      box-sizing: border-box;
+    }
+    #m-search input {
+      height: 36px !important;
+      min-height: 0 !important;
+      padding: 5px 12px !important;
+      border-radius: 14px !important;
+      box-sizing: border-box;
+    }
+    /* Wyszukiwarka rozwija się pod paskiem nawigacji,
+       dzięki czemu kategorie i koszyk pozostają widoczne. */
+    .m-nav { position: relative; }
+    .m-nav #m-search {
+      position: absolute !important;
+      right: 100px !important;
+      top: 100% !important;
+      left: auto !important;
+      transform: none !important;
+      z-index: 20;
+      width: min(400px, calc(100vw - 120px)) !important;
+    }
+    @media (max-width: 520px) {
+      .m-nav #m-search {
+        right: 100px !important;
+        width: min(260px, calc(100vw - 120px)) !important;
+      }
+    }
+    /* Pole wyszukiwania i przycisk „Szukaj” w jednym rzędzie. */
+    #m-search form,
+    #m-search .input-group,
+    #m-search .d-flex {
+      display: flex !important;
+      flex-direction: row !important;
+      flex-wrap: nowrap !important;
+      align-items: center !important;
+      gap: 8px !important;
+      width: 100%;
+    }
+    #m-search input[type="search"],
+    #m-search input[type="text"] {
+      flex: 1 1 0 !important;
+      width: 0 !important;
+      min-width: 0 !important;
+      margin: 0 !important;
+    }
+    #m-search button[type="submit"],
+    #m-search input[type="submit"] {
+      flex: 0 0 auto !important;
+      width: auto !important;
+      white-space: nowrap !important;
+      margin: 0 !important;
+    }
+    @media (max-width: 520px) {
+      .m-nav #m-search {
+        right: 12px !important;
+        width: min(400px, calc(100vw - 24px)) !important;
+      }
+      #m-search { max-width: calc(100vw - 24px) !important; }
+    }
+    /* Lupa i koszyk zawsze przy prawej krawędzi paska nawigacji. */
+    .m-nav > .container-fluid > .d-flex.order-lg-3 {
+      margin-left: auto;
+      flex-shrink: 0;
+    }
+    /* Kompaktowa stopka: mniejsze odstępy i godziny blisko dni. */
+    .m-footer { padding-top: 32px !important; padding-bottom: 22px !important; }
+    .m-footer > .container > .row { --bs-gutter-y: 18px; }
+    .m-footer .m-eyebrow { margin-bottom: 12px; }
+    .m-footer .list-unstyled { margin-bottom: 0; }
+    .m-footer .list-unstyled li { padding-top: 3px !important; padding-bottom: 3px !important; }
+    .m-footer .m-footer-hours li {
+      display: grid !important;
+      grid-template-columns: 82px max-content;
+      justify-content: start !important;
+      column-gap: 12px;
+      align-items: baseline;
+    }
+    .m-footer .m-footer-hours li span:last-child { white-space: nowrap; }
+    .m-footer > .container > p:last-child { margin-top: 24px !important; padding-top: 12px; border-top: 1px solid rgba(255,255,255,.16); }
+    @media (max-width: 575px) {
+      .m-footer { padding-top: 26px !important; }
+      .m-footer .m-footer-hours li { grid-template-columns: 76px max-content; column-gap: 8px; }
+    }
+
+    /* Telefon: nie ściskamy siedmiu hotspotów na pomniejszonym zdjęciu.
+       Te same interaktywne przyciski z nazwami są dostępne pod zdjęciem. */
+    @media (max-width: 767.98px) {
+      .m-stage .m-hot2 { display: none !important; }
+      .m-explore-chips { display: grid !important; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; width: 100%; }
+      .m-explore-chips button { display: block !important; width: 100%; min-width: 0; min-height: 44px; padding: 10px 12px !important; white-space: normal !important; overflow-wrap: anywhere; font-size: 0.9rem; line-height: 1.3; text-align: center; }
+    }
+    @media (max-width: 350px) {
+      .m-explore-chips { grid-template-columns: 1fr; }
+    }
+  
+/* Wyszukiwarka: input i przycisk zawsze w jednym rzędzie (także mobile). */
+nav.m-nav form#m-search {
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: nowrap !important;
+  align-items: center !important;
+  gap: 8px !important;
+  padding: 8px !important;
+  max-width: min(420px, calc(100vw - 24px)) !important;
+  box-sizing: border-box;
+}
+nav.m-nav form#m-search > input.form-control {
+  flex: 1 1 auto !important;
+  width: 1px !important;
+  min-width: 0 !important;
+  max-width: none !important;
+  margin: 0 !important;
+  height: 38px !important;
+}
+nav.m-nav form#m-search > button[type="submit"] {
+  display: inline-flex !important;
+  flex: 0 0 auto !important;
+  align-items: center;
+  justify-content: center;
+  width: auto !important;
+  min-width: 0 !important;
+  min-height: 38px !important;
+  height: 38px !important;
+  padding: 0 14px !important;
+  margin: 0 !important;
+  white-space: nowrap !important;
+  font-size: 0.85rem;
+}
+@media (max-width: 520px) {
+  nav.m-nav form#m-search {
+    right: 12px !important;
+    width: calc(100vw - 24px) !important;
+  }
+}
+
+.m-page-inline-1 { color:inherit !important; }
+
+.m-page-inline-2 { color:inherit !important; }
+
+.m-page-inline-3 { color:inherit !important; }
+
+.m-page-inline-4 { font-style:normal !important; }

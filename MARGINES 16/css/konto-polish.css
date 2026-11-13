@@ -1,0 +1,41 @@
+/* MARGINES — dopracowany panel klienta */
+body[data-page="konto"] .account-main{background:#f8f3ec;padding:38px 0 92px}
+body[data-page="konto"] .account-container{max-width:1180px}
+body[data-page="konto"] .account-crumb{margin-bottom:34px}
+body[data-page="konto"] .account-heading{margin-bottom:34px;align-items:end}
+body[data-page="konto"] .account-heading h1{font-size:clamp(2.8rem,5vw,4.6rem);letter-spacing:-.055em}
+body[data-page="konto"] .account-heading p:not(.account-eyebrow){font-size:1rem;line-height:1.7}
+body[data-page="konto"] .account-pill{letter-spacing:.12em;font-size:.68rem;background:transparent;border-color:#cdb8a1}
+body[data-page="konto"] .account-layout{grid-template-columns:260px minmax(0,1fr);gap:24px}
+body[data-page="konto"] .account-side,body[data-page="konto"] .account-panel{border-radius:16px;border:1px solid #e9dfd3;background:#fffdf9;box-shadow:0 8px 28px rgba(67,45,26,.035)}
+body[data-page="konto"] .account-side{top:90px}
+body[data-page="konto"] .account-profile{position:relative;padding:44px 20px 23px;background:#f3e8da;gap:13px}
+body[data-page="konto"] .account-profile-label{position:absolute;top:17px;left:20px;font-size:.62rem;font-weight:800;letter-spacing:.17em;color:#80614c}
+body[data-page="konto"] .account-avatar{background:#422d22;color:#fff6e9;width:52px;height:52px}
+body[data-page="konto"] .account-nav{padding:12px}
+body[data-page="konto"] .account-nav a{display:flex;align-items:center;gap:12px;border-radius:10px;padding:13px 14px;font-weight:700;transition:background .2s,color .2s}
+body[data-page="konto"] .account-nav a:hover{background:#f3e8dc}
+body[data-page="konto"] .account-nav a[aria-current="page"]{background:#422d22;color:#fff9f1}
+body[data-page="konto"] .account-menu-icon{flex:none}
+body[data-page="konto"] .account-side-bottom{border-top:1px solid #e9dfd3;padding:19px 23px}
+body[data-page="konto"] .account-content{min-width:0}
+body[data-page="konto"] .account-mobile-intro{display:none}
+body[data-page="konto"] .account-panel{padding:28px}
+body[data-page="konto"] .account-welcome.account-hero{position:relative;overflow:hidden;background:#e8d5be;border-color:#ddc7ac;padding:40px 42px 42px;min-height:280px}
+body[data-page="konto"] .account-hero:after{content:"M";position:absolute;right:-8px;bottom:-105px;font:700 340px/.9 'Bricolage Grotesque',sans-serif;color:rgba(105,66,38,.075);pointer-events:none}
+body[data-page="konto"] .account-hero>*{position:relative;z-index:1}
+body[data-page="konto"] .account-hero h2{font-family:'Bricolage Grotesque',sans-serif;font-size:clamp(1.9rem,3vw,2.8rem);letter-spacing:-.045em;max-width:550px}
+body[data-page="konto"] .account-hero p:not(.account-eyebrow){max-width:490px;line-height:1.75;color:#604b3b}
+body[data-page="konto"] .account-btn{border-radius:9px;padding:13px 22px;background:#422d22;color:#fff9f1;font-weight:800}
+body[data-page="konto"] .account-btn:hover{background:#67472f;color:white}
+body[data-page="konto"] .account-stats{gap:20px;margin:20px 0}
+body[data-page="konto"] .account-stats .account-panel{position:relative;min-height:166px;padding:25px 26px}
+body[data-page="konto"] .account-stat-icon{position:absolute;right:24px;top:24px;display:grid;place-items:center;width:43px;height:43px;background:#f1e4d6;border-radius:12px;color:#68452f}
+body[data-page="konto"] .account-stat-icon svg{width:23px;height:23px}
+body[data-page="konto"] .account-stats strong{font-family:'Bricolage Grotesque',sans-serif;font-size:2.1rem;letter-spacing:-.04em}
+body[data-page="konto"] .account-content h3{font-family:'Bricolage Grotesque',sans-serif;letter-spacing:-.03em}
+body[data-page="konto"] .account-form input,body[data-page="konto"] .account-form select{background:#fff;border:1px solid #cbbbaa;border-radius:9px;min-height:48px}
+body[data-page="konto"] .account-form input:focus,body[data-page="konto"] .account-form select:focus{outline:3px solid #e7c8a4;outline-offset:1px;border-color:#765038}
+body[data-page="konto"] .account-nav a:focus-visible,body[data-page="konto"] .account-btn:focus-visible{outline:3px solid #b47c4b;outline-offset:3px}
+@media(max-width:991px){body[data-page="konto"] .account-side{position:static}body[data-page="konto"] .account-layout{grid-template-columns:1fr}body[data-page="konto"] .account-nav{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:5px}body[data-page="konto"] .account-nav a{justify-content:center;text-align:center;flex-wrap:wrap}body[data-page="konto"] .account-nav a span{width:100%}}
+@media(max-width:575px){body[data-page="konto"] .account-main{padding-top:22px}body[data-page="konto"] .account-heading{display:block}body[data-page="konto"] .account-pill{display:inline-block;margin-top:18px}body[data-page="konto"] .account-profile{padding-top:40px}body[data-page="konto"] .account-nav a{font-size:.7rem;padding:10px 4px}body[data-page="konto"] .account-nav a svg{width:18px;height:18px}body[data-page="konto"] .account-welcome.account-hero{padding:30px 25px}body[data-page="konto"] .account-panel{padding:23px}body[data-page="konto"] .account-stats{grid-template-columns:1fr}body[data-page="konto"] .account-stats .account-panel{min-height:140px}}

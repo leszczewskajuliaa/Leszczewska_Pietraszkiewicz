@@ -1,0 +1,14 @@
+/* MARGINES — style podstrony ksiazka-swiatlo-poludnia.html */
+.m-page-inline-1 { --c-bg:oklch(0.88 0.008 80) !important; --c-fg:oklch(0.2 0.01 60) !important; --c-acc:oklch(0.3 0.01 60) !important; --c-r:50% 50% 0 0 !important; --c-align:center !important; }
+
+.m-page-inline-2 { font-size:2.2rem !important; }
+
+.m-page-inline-3 { --c-bg:oklch(0.3 0.01 60) !important; --c-fg:oklch(0.95 0.01 80) !important; --c-acc:oklch(0.58 0.12 42) !important; --c-r:4px !important; --c-align:center !important; }
+
+.m-page-inline-4 { color:inherit !important; }
+
+.m-page-inline-5 { color:inherit !important; }
+
+.m-page-inline-6 { color:inherit !important; }
+
+.m-page-inline-7 { font-style:normal !important; }

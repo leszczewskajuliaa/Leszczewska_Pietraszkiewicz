@@ -1,0 +1,1 @@
+(()=>{const checkbox=document.getElementById('want-invoice'),fields=document.getElementById('invoice-fields');if(!checkbox||!fields)return;function sync(){fields.classList.toggle('checkout-hidden',!checkbox.checked);fields.querySelectorAll('input').forEach(x=>{x.required=checkbox.checked;x.disabled=!checkbox.checked})}checkbox.addEventListener('change',sync);sync()})();

@@ -1,0 +1,18 @@
+/* MARGINES — style podstrony ksiazka-plakat-forma.html */
+.m-page-inline-1 { --c-bg:oklch(0.36 0.05 50) !important; --c-fg:oklch(0.95 0.02 80) !important; --c-acc:oklch(0.47 0.06 120) !important; --c-r:0 50% 50% 0 !important; --c-align:center !important; }
+
+.m-page-inline-2 { font-size:2.2rem !important; }
+
+.m-page-inline-3 { --c-bg:oklch(0.62 0.12 45) !important; --c-fg:oklch(0.97 0.01 80) !important; --c-acc:oklch(0.3 0.04 50) !important; --c-r:50% 0 50% 0 !important; --c-align:center !important; }
+
+.m-page-inline-4 { --c-bg:oklch(0.95 0.005 85) !important; --c-fg:oklch(0.2 0.01 60) !important; --c-acc:oklch(0.25 0.01 60) !important; --c-r:50% 50% 0 0 !important; --c-align:center !important; }
+
+.m-page-inline-5 { --c-bg:oklch(0.9 0.15 125) !important; --c-fg:oklch(0.2 0.01 60) !important; --c-acc:oklch(0.2 0.01 60) !important; --c-r:0 !important; --c-align:center !important; }
+
+.m-page-inline-6 { color:inherit !important; }
+
+.m-page-inline-7 { color:inherit !important; }
+
+.m-page-inline-8 { color:inherit !important; }
+
+.m-page-inline-9 { font-style:normal !important; }

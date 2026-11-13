@@ -1,0 +1,10 @@
+/* MARGINES — style podstrony ksiazka-forma-i-funkcja.html */
+.m-page-inline-1 { --c-bg:oklch(0.47 0.06 120) !important; --c-fg:oklch(0.97 0.01 85) !important; --c-acc:oklch(0.88 0.06 95) !important; --c-r:0 !important; --c-align:flex-start !important; }
+
+.m-page-inline-2 { color:inherit !important; }
+
+.m-page-inline-3 { color:inherit !important; }
+
+.m-page-inline-4 { color:inherit !important; }
+
+.m-page-inline-5 { font-style:normal !important; }

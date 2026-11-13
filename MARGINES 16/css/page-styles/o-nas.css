@@ -1,0 +1,632 @@
+/* MARGINES — style podstrony o-nas.html */
+/* Styl przeniesiony z o-nas.html */
+/* ============================================= */
+    /* STRONA „O NAS” — miękki, przyjazny wygląd      */
+    /* Kolory: krem #fbf5ec, piasek #f1e6d8,          */
+    /* brąz #322116, złoto #d9a46b                    */
+    /* ============================================= */
+
+
+    /* ---------- Tło i wspólne elementy ---------- */
+
+    body[data-page="o-nas"] main {
+      background: linear-gradient(180deg, #fbf5ec 0%, #f7efe3 100%);
+      overflow-x: clip;
+    }
+
+    body[data-page="o-nas"] .m-eyebrow {
+      letter-spacing: 0.14em;
+      font-weight: 600;
+      color: #8a6a52;
+    }
+
+    body[data-page="o-nas"] h1,
+    body[data-page="o-nas"] h2 {
+      font-weight: 600;
+    }
+
+    body[data-page="o-nas"] .btn {
+      border-radius: 999px;
+    }
+
+    /* ciepła kreska pod nagłówkami */
+    .m-about-hero h1::after,
+    .m-about-section h2::after {
+      content: "";
+      display: block;
+      width: 48px;
+      height: 4px;
+      margin-top: 16px;
+      background: #d9a46b;
+      border-radius: 999px;
+    }
+
+    .m-about-section {
+      margin-bottom: 5.5rem;
+    }
+
+    .m-about-section > .m-lead {
+      max-width: 38rem;
+      margin: 1rem 0 0;
+      color: #75665b;
+      line-height: 1.7;
+    }
+
+    .m-about-text p {
+      font-size: 1.06rem;
+      line-height: 1.8;
+      color: #4d3d31;
+    }
+
+    .m-link-arrow {
+      display: inline-block;
+      margin-top: 0.4rem;
+      font-weight: 600;
+      text-decoration: none;
+      color: #8a5a35;
+      transition: transform 0.2s ease, color 0.2s ease;
+    }
+
+    .m-link-arrow:hover {
+      color: #5e3c28;
+      transform: translateX(4px);
+    }
+
+
+    /* ---------- Historia: zdjęcie z ozdobnymi kształtami ---------- */
+
+    .m-about-photo {
+      position: relative;
+      margin: 0;
+    }
+
+    .m-about-photo img {
+      position: relative;
+      z-index: 1;
+      display: block;
+      width: 100%;
+      height: auto;
+      aspect-ratio: 3 / 2;
+      object-fit: cover;
+      border-radius: 28px;
+      box-shadow: 0 14px 38px rgba(80, 56, 39, 0.2);
+    }
+
+    .m-about-photo .shape {
+      position: absolute;
+      z-index: 0;
+      animation: m-about-float 9s ease-in-out infinite alternate;
+    }
+
+    .m-about-photo .circle {
+      top: -26px;
+      left: -26px;
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      background: rgba(190, 110, 70, 0.24);
+    }
+
+    .m-about-photo .arch {
+      right: -22px;
+      bottom: -26px;
+      width: 112px;
+      height: 112px;
+      border-radius: 50% 50% 0 0;
+      background: rgba(98, 128, 72, 0.28);
+      animation-duration: 11s;
+    }
+
+    .m-about-photo .ring {
+      top: -22px;
+      right: 14%;
+      width: 68px;
+      height: 68px;
+      border-radius: 50%;
+      border: 3px solid rgba(190, 210, 70, 0.75);
+      animation-duration: 7s;
+    }
+
+    @keyframes m-about-float {
+      from { translate: 0 -8px; rotate: -3deg; }
+      to   { translate: 0 10px; rotate: 4deg; }
+    }
+
+
+    /* ---------- Pasek z liczbami ---------- */
+
+    .m-stats {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+      padding: 0;
+      margin: 0 0 5.5rem;
+      list-style: none;
+    }
+
+    .m-stat {
+      padding: 1.7rem 1.4rem;
+      text-align: center;
+      background: #fffaf4;
+      border-radius: 24px;
+      box-shadow: 0 4px 16px rgba(80, 56, 39, 0.09);
+    }
+
+    .m-stat strong {
+      display: block;
+      font-family: var(--m-serif);
+      font-size: clamp(2.4rem, 5vw, 3.6rem);
+      line-height: 1;
+      letter-spacing: -0.03em;
+      color: #8a5a35;
+    }
+
+    .m-stat span {
+      display: block;
+      margin-top: 0.6rem;
+      font-size: 0.92rem;
+      color: #6b5442;
+    }
+
+
+    /* ---------- „Pod jednym dachem”: trzy światy ---------- */
+
+    .m-world {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      overflow: hidden;
+      background: #fffaf4;
+      border-radius: 26px;
+      box-shadow: 0 4px 16px rgba(80, 56, 39, 0.09);
+      transition:
+        transform 0.35s cubic-bezier(0.2, 0.7, 0.2, 1),
+        box-shadow 0.35s ease;
+    }
+
+    .m-world:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 16px 34px rgba(45, 30, 20, 0.15);
+    }
+
+    .m-world-cover {
+      position: relative;
+      display: grid;
+      place-items: center;
+      height: 150px;
+      overflow: hidden;
+    }
+
+    .m-world-cover i {
+      display: block;
+      width: 72px;
+      height: 72px;
+      transition: transform 0.5s cubic-bezier(0.2, 0.7, 0.2, 1);
+    }
+
+    .m-world:hover .m-world-cover i {
+      transform: scale(1.18) rotate(-6deg);
+    }
+
+    .m-world-cover.is-books  { background: #e4ecd6; }
+    .m-world-cover.is-books i { border-radius: 50%; background: #5f7f48; }
+
+    .m-world-cover.is-coffee { background: #f6dccb; }
+    .m-world-cover.is-coffee i { border-radius: 50% 50% 0 0; background: #b8603f; }
+
+    .m-world-cover.is-events { background: #f3eab8; }
+    .m-world-cover.is-events i { border-radius: 14px; background: #6b4a30; }
+
+    .m-world-body {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      padding: 1.5rem 1.6rem 1.7rem;
+    }
+
+    .m-world-body h3 {
+      margin: 0 0 0.5rem;
+      font-size: 1.3rem;
+    }
+
+    .m-world-body p {
+      margin: 0 0 1rem;
+      font-size: 0.95rem;
+      line-height: 1.65;
+      color: #75665b;
+    }
+
+    .m-world-body .m-link-arrow {
+      margin-top: auto;
+    }
+
+
+    /* ---------- Kawiarnia: zdjęcie i napoje ---------- */
+
+    .m-about-pic {
+      margin: 0;
+    }
+
+    .m-about-pic img {
+      display: block;
+      width: 100%;
+      height: auto;
+      aspect-ratio: 3 / 2;
+      object-fit: cover;
+      border-radius: 28px;
+      box-shadow: 0 14px 38px rgba(80, 56, 39, 0.2);
+    }
+
+    .m-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      padding: 0;
+      margin: 1.4rem 0 1.2rem;
+      list-style: none;
+    }
+
+    .m-chips li {
+      padding: 8px 16px;
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: #4a3224;
+      background: #f1e6d8;
+      border-radius: 999px;
+      box-shadow: 0 2px 6px rgba(80, 56, 39, 0.06);
+    }
+
+
+    /* ---------- Wartości: karty z ikonami ---------- */
+
+    .m-value {
+      height: 100%;
+      padding: 1.8rem 1.6rem 2rem;
+      background: #fffaf4;
+      border-radius: 24px;
+      box-shadow: 0 4px 16px rgba(80, 56, 39, 0.09);
+      transition:
+        transform 0.35s cubic-bezier(0.2, 0.7, 0.2, 1),
+        box-shadow 0.35s ease;
+    }
+
+    .m-value:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 16px 34px rgba(45, 30, 20, 0.15);
+    }
+
+    .m-value h3 {
+      margin: 1.3rem 0 0.5rem;
+      font-size: 1.2rem;
+    }
+
+    .m-value p {
+      margin: 0;
+      font-size: 0.95rem;
+      line-height: 1.65;
+      color: #75665b;
+    }
+
+    .m-value-icon {
+      display: grid;
+      place-items: center;
+      width: 64px;
+      height: 64px;
+      border-radius: 20px;
+      transition: transform 0.35s cubic-bezier(0.2, 0.7, 0.2, 1);
+    }
+
+    .m-value:hover .m-value-icon {
+      transform: rotate(-6deg) scale(1.06);
+    }
+
+    .m-value-icon i {
+      display: block;
+      width: 28px;
+      height: 28px;
+    }
+
+    .m-value-icon.is-circle { background: #e4ecd6; }
+    .m-value-icon.is-circle i { border-radius: 50%; background: #5f7f48; }
+
+    .m-value-icon.is-arch { background: #f6dccb; }
+    .m-value-icon.is-arch i { border-radius: 50% 50% 0 0; background: #b8603f; }
+
+    .m-value-icon.is-square { background: #f3eab8; }
+    .m-value-icon.is-square i { border-radius: 7px; background: #6b4a30; }
+
+    .m-value-icon.is-ring { background: #e8e2f0; }
+    .m-value-icon.is-ring i { border-radius: 50%; border: 5px solid #6c5a8e; }
+
+    .m-value-icon.is-leaf { background: #dfe9ea; }
+    .m-value-icon.is-leaf i { border-radius: 50% 0 50% 0; background: #4f7f86; }
+
+    .m-value-icon.is-half { background: #f6dde3; }
+    .m-value-icon.is-half i { border-radius: 50% 50% 50% 0; background: #b0566d; }
+
+
+    /* ---------- Stały rytm tygodnia ---------- */
+
+    .m-rhythm {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+      padding: 0;
+      margin: 0;
+      list-style: none;
+    }
+
+    .m-rhythm article {
+      height: 100%;
+      padding: 1.5rem 1.6rem 1.7rem;
+      background: #fffaf4;
+      border-radius: 24px;
+      box-shadow: 0 4px 16px rgba(80, 56, 39, 0.09);
+      transition:
+        transform 0.35s cubic-bezier(0.2, 0.7, 0.2, 1),
+        box-shadow 0.35s ease;
+    }
+
+    .m-rhythm article:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 14px 30px rgba(45, 30, 20, 0.14);
+    }
+
+    .m-rhythm .when {
+      display: inline-block;
+      padding: 7px 14px;
+      font-size: 0.74rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: #5a3a1e;
+      background: #f6e3c4;
+      border-radius: 999px;
+    }
+
+    .m-rhythm h3 {
+      margin: 1rem 0 0.4rem;
+      font-size: 1.25rem;
+    }
+
+    .m-rhythm p {
+      margin: 0;
+      font-size: 0.95rem;
+      line-height: 1.65;
+      color: #75665b;
+    }
+
+    .m-note {
+      margin: 1.2rem 0 0;
+      font-size: 0.92rem;
+      color: #6b5442;
+    }
+
+
+    /* ---------- Pytania i odpowiedzi ---------- */
+
+    .m-faq {
+      max-width: 46rem;
+      margin-top: 1.8rem;
+    }
+
+    .m-faq details {
+      margin-bottom: 12px;
+      padding: 0 1.5rem;
+      background: #fffaf4;
+      border-radius: 20px;
+      box-shadow: 0 4px 14px rgba(80, 56, 39, 0.08);
+      transition: box-shadow 0.25s ease;
+    }
+
+    .m-faq details[open] {
+      box-shadow: 0 10px 26px rgba(45, 30, 20, 0.13);
+    }
+
+    .m-faq summary {
+      position: relative;
+      padding: 1.2rem 2.8rem 1.2rem 0;
+      font-weight: 600;
+      cursor: pointer;
+      list-style: none;
+    }
+
+    .m-faq summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .m-faq summary::after {
+      content: "+";
+      position: absolute;
+      top: 50%;
+      right: 0;
+      display: grid;
+      place-items: center;
+      width: 32px;
+      height: 32px;
+      font-size: 1.2rem;
+      line-height: 1;
+      color: #4a3224;
+      background: #f1e6d8;
+      border-radius: 50%;
+      transform: translateY(-50%);
+      transition: background 0.2s ease, transform 0.3s ease;
+    }
+
+    .m-faq details[open] summary::after {
+      content: "–";
+      background: #d9a46b;
+      transform: translateY(-50%) rotate(180deg);
+    }
+
+    .m-faq details p {
+      margin: 0;
+      padding: 0 0 1.3rem;
+      line-height: 1.7;
+      color: #6b5442;
+    }
+
+
+    /* ---------- Odwiedź nas: adres, godziny, kontakt ---------- */
+
+    .m-visit-tile {
+      height: 100%;
+      padding: 1.6rem 1.6rem 1.8rem;
+      background: #fffaf4;
+      border-radius: 24px;
+      box-shadow: 0 4px 16px rgba(80, 56, 39, 0.09);
+    }
+
+    .m-visit-tile h3 {
+      margin: 0 0 0.8rem;
+      font-size: 0.74rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #8a6a52;
+    }
+
+    .m-visit-tile p {
+      margin: 0;
+      line-height: 1.65;
+      color: #4d3d31;
+    }
+
+    .m-visit-tile ul {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+    }
+
+    .m-visit-tile li {
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 0.35rem 0;
+      border-bottom: 1px solid rgba(80, 56, 39, 0.1);
+    }
+
+    .m-visit-tile li:last-child {
+      border-bottom: 0;
+    }
+
+
+    /* ---------- Drobne elementy ---------- */
+
+    body[data-page="o-nas"] .m-fict {
+      border: 0;
+      border-radius: 999px;
+      background: #f1e6d8;
+      padding: 0.5rem 1.1rem;
+    }
+
+
+    /* ---------- Wjeżdżanie sekcji przy przewijaniu ---------- */
+
+    .m-reveal {
+      opacity: 0;
+      transform: translateY(26px);
+      transition:
+        opacity 0.7s ease var(--d, 0ms),
+        transform 0.7s cubic-bezier(0.2, 0.7, 0.2, 1) var(--d, 0ms);
+    }
+
+    .m-reveal.is-in {
+      opacity: 1;
+      transform: none;
+    }
+
+
+    /* ---------- Telefon ---------- */
+
+    @media (max-width: 767.98px) {
+      .m-about-section {
+        margin-bottom: 3.5rem;
+      }
+
+      .m-stats {
+        gap: 10px;
+        margin-bottom: 3.5rem;
+      }
+
+      .m-stat {
+        padding: 1.2rem 0.6rem;
+        border-radius: 20px;
+      }
+
+      .m-stat span {
+        font-size: 0.78rem;
+      }
+
+      .m-rhythm {
+        grid-template-columns: 1fr;
+      }
+
+      .m-about-photo .circle { top: -14px; left: -10px; width: 100px; height: 100px; }
+      .m-about-photo .arch   { right: -8px; bottom: -16px; width: 84px; height: 84px; }
+      .m-about-photo .ring   { top: -14px; right: 10%; width: 52px; height: 52px; }
+    }
+
+
+    /* ---------- Ograniczony ruch ---------- */
+
+    @media (prefers-reduced-motion: reduce) {
+      .m-reveal {
+        opacity: 1;
+        transform: none;
+        transition: none;
+      }
+
+      .m-about-photo .shape,
+      .m-value,
+      .m-value-icon,
+      .m-world,
+      .m-world-cover i,
+      .m-rhythm article,
+      .m-link-arrow {
+        animation: none;
+        transition: none;
+      }
+    }
+
+/* Styl przeniesiony z o-nas.html */
+/* Nawigacja i stopka zgodne ze stroną Kawiarnia */
+.m-nav { position: relative; }
+.m-nav #m-search { position: absolute !important; right: 100px !important; top: 100% !important; left: auto !important; transform: none !important; z-index: 20; width: min(400px, calc(100vw - 120px)) !important; }
+#m-search { max-width: 400px !important; height: auto !important; min-height: 0 !important; padding-top: 6px !important; padding-bottom: 6px !important; border-radius: 22px !important; box-sizing: border-box; }
+#m-search input { height: 36px !important; min-height: 0 !important; padding: 5px 12px !important; border-radius: 14px !important; box-sizing: border-box; }
+.m-nav > .container-fluid > .d-flex.order-lg-3 { margin-left: auto; flex-shrink: 0; }
+.m-footer { padding-top: 32px !important; padding-bottom: 22px !important; }
+.m-footer > .container > .row { --bs-gutter-y: 18px; }
+.m-footer .m-eyebrow { margin-bottom: 12px; }
+.m-footer .list-unstyled { margin-bottom: 0; }
+.m-footer .list-unstyled li { padding-top: 3px !important; padding-bottom: 3px !important; }
+.m-footer .m-footer-hours li { display: grid !important; grid-template-columns: 82px max-content; justify-content: start !important; column-gap: 12px; align-items: baseline; }
+.m-footer .m-footer-hours li span:last-child { white-space: nowrap; }
+.m-footer > .container > p:last-child { margin-top: 24px !important; padding-top: 12px; border-top: 1px solid rgba(255,255,255,.16); }
+@media(max-width: 520px) { .m-nav #m-search { right: 100px !important; width: min(260px, calc(100vw - 120px)) !important; } }
+@media(max-width: 575px) { .m-footer { padding-top: 26px !important; } .m-footer .m-footer-hours li { grid-template-columns: 76px max-content; column-gap: 8px; } }
+
+.m-page-inline-1 { max-width:38rem !important; }
+
+.m-page-inline-2 { font-size:2.2rem !important; }
+
+.m-page-inline-3 { font-size:2.2rem !important; }
+
+.m-page-inline-4 { font-size:2.2rem !important; }
+
+.m-page-inline-5 { font-size:2.2rem !important; }
+
+.m-page-inline-6 { font-size:2.2rem !important; }
+
+.m-page-inline-7 { font-size:2.2rem !important; }
+
+.m-page-inline-8 { font-size:2.2rem !important; }
+
+.m-page-inline-9 { color:inherit !important; }
+
+.m-page-inline-10 { color:inherit !important; }
+
+.m-page-inline-11 { color:inherit !important; }
+
+.m-page-inline-12 { font-style:normal !important; }

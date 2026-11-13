@@ -1,0 +1,63 @@
+/* MARGINES — style podstrony blog-dlaczego-czytamy-wolniej.html */
+/* Styl przeniesiony z blog-dlaczego-czytamy-wolniej.html */
+.article-photo {
+      display: block;
+      width: 100%;
+      height: auto;
+      max-height: 480px;
+      object-fit: cover;
+      border-radius: 12px;
+      margin: 28px 0;
+    }
+
+    .article-section {
+      margin-top: 48px;
+      margin-bottom: 40px;
+    }
+
+    .article-section h2 {
+      margin-bottom: 20px;
+    }
+
+    .article-section p {
+      line-height: 1.9;
+      margin-bottom: 18px;
+    }
+
+    .article-highlight {
+      background-color: #f5f0e8;
+      color: #30291f;
+      padding: 30px;
+      border-radius: 12px;
+      margin: 40px 0;
+    }
+
+    .article-highlight p {
+      margin-bottom: 0;
+    }
+
+    .article-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 25px;
+    }
+
+    .article-caption {
+      font-size: 0.85rem;
+      opacity: 0.7;
+      margin-top: -15px;
+      margin-bottom: 25px;
+    }
+
+.m-page-inline-1 { max-width:48rem !important; }
+
+.m-page-inline-2 { max-width:48rem !important; }
+
+.m-page-inline-3 { color:inherit !important; }
+
+.m-page-inline-4 { color:inherit !important; }
+
+.m-page-inline-5 { color:inherit !important; }
+
+.m-page-inline-6 { font-style:normal !important; }

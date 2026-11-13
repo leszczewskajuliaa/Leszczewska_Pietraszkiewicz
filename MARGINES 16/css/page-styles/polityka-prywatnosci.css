@@ -1,0 +1,71 @@
+/* MARGINES — style podstrony polityka-prywatnosci.html */
+/* Styl przeniesiony z polityka-prywatnosci.html */
+/* Wysuwana wyszukiwarka: niższy panel, bez zmiany jego szerokości. */
+    #m-search {
+      max-width: 400px !important;
+      height: auto !important;
+      min-height: 0 !important;
+      padding-top: 6px !important;
+      padding-bottom: 6px !important;
+      border-radius: 22px !important;
+      box-sizing: border-box;
+    }
+    #m-search input {
+      height: 36px !important;
+      min-height: 0 !important;
+      padding: 5px 12px !important;
+      border-radius: 14px !important;
+      box-sizing: border-box;
+    }
+    /* Wyszukiwarka rozwija się pod paskiem nawigacji,
+       dzięki czemu kategorie i koszyk pozostają widoczne. */
+    .m-nav { position: relative; }
+    .m-nav #m-search {
+      position: absolute !important;
+      right: 100px !important;
+      top: 100% !important;
+      left: auto !important;
+      transform: none !important;
+      z-index: 20;
+      width: min(400px, calc(100vw - 120px)) !important;
+    }
+    @media (max-width: 520px) {
+      .m-nav #m-search {
+        right: 100px !important;
+        width: min(260px, calc(100vw - 120px)) !important;
+      }
+    }
+    /* Lupa i koszyk zawsze przy prawej krawędzi paska nawigacji. */
+    .m-nav > .container-fluid > .d-flex.order-lg-3 {
+      margin-left: auto;
+      flex-shrink: 0;
+    }
+    /* Kompaktowa stopka: mniejsze odstępy i godziny blisko dni. */
+    .m-footer { padding-top: 32px !important; padding-bottom: 22px !important; }
+    .m-footer > .container > .row { --bs-gutter-y: 18px; }
+    .m-footer .m-eyebrow { margin-bottom: 12px; }
+    .m-footer .list-unstyled { margin-bottom: 0; }
+    .m-footer .list-unstyled li { padding-top: 3px !important; padding-bottom: 3px !important; }
+    .m-footer .m-footer-hours li {
+      display: grid !important;
+      grid-template-columns: 82px max-content;
+      justify-content: start !important;
+      column-gap: 12px;
+      align-items: baseline;
+    }
+    .m-footer .m-footer-hours li span:last-child { white-space: nowrap; }
+    .m-footer > .container > p:last-child { margin-top: 24px !important; padding-top: 12px; border-top: 1px solid rgba(255,255,255,.16); }
+    @media (max-width: 575px) {
+      .m-footer { padding-top: 26px !important; }
+      .m-footer .m-footer-hours li { grid-template-columns: 76px max-content; column-gap: 8px; }
+    }
+.privacy-main{background:linear-gradient(180deg,#fbf5ec 0%,#f7efe3 100%);color:#39291f;padding:0 0 72px;min-height:70vh}
+.privacy-container{max-width:1140px}.privacy-heading{padding:55px 0 35px}.privacy-heading .m-eyebrow{color:#8a6a52;letter-spacing:.15em;font-weight:700}.privacy-heading h1{font-size:clamp(2.25rem,5vw,3.7rem);font-weight:700;margin:10px 0 15px}.privacy-heading>p:not(.m-eyebrow){color:#806b5b;max-width:650px;font-size:1.04rem}.privacy-pill{display:inline-block;margin-top:8px;padding:8px 14px;border-radius:999px;background:#f1e6d8;color:#67442d;font-size:.78rem;font-weight:700}.privacy-layout{display:grid;grid-template-columns:235px minmax(0,1fr);align-items:start;gap:28px}.privacy-aside,.privacy-article{background:#fffaf4;border:1px solid #e9daca;border-radius:24px;box-shadow:0 8px 24px rgba(80,56,39,.06)}.privacy-aside{padding:24px;position:sticky;top:24px}.privacy-aside strong{display:block;font-size:.85rem;margin-bottom:15px}.privacy-aside nav{display:grid;gap:4px}.privacy-aside a{color:#806b5b;text-decoration:none;padding:8px 9px;border-radius:9px;font-size:.82rem}.privacy-aside a:hover,.privacy-aside a:focus-visible{background:#f1e6d8;color:#39291f}.privacy-article{padding:30px 38px}.privacy-note{background:#f5eadb;border-left:3px solid #a97851;padding:18px 20px;border-radius:0 14px 14px 0;color:#67442d;font-size:.9rem;line-height:1.7}.privacy-article section{padding:29px 0;border-bottom:1px solid #e9daca;scroll-margin-top:24px}.privacy-article section:last-child{border-bottom:0;padding-bottom:4px}.privacy-number{color:#a97851;font-size:.74rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase}.privacy-article h2{font-family:'Bricolage Grotesque',sans-serif;font-size:clamp(1.35rem,2.2vw,1.7rem);font-weight:700;margin:10px 0 15px}.privacy-article p{color:#685447;line-height:1.85;margin:0 0 12px;font-size:.94rem}.privacy-article a{color:#75492b}.privacy-button{display:inline-block;text-decoration:none;margin-top:14px;padding:12px 20px;background:#322116;color:#fff!important;border-radius:999px;font-size:.87rem;font-weight:700}.privacy-button:hover{background:#67442d}@media(max-width:850px){.privacy-layout{grid-template-columns:1fr}.privacy-aside{position:static}.privacy-aside nav{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:575px){.privacy-heading{padding:36px 0 26px}.privacy-aside{padding:18px}.privacy-article{padding:20px}.privacy-aside nav{grid-template-columns:1fr}.privacy-main{padding-bottom:45px}}
+
+.m-page-inline-1 { color:inherit !important; }
+
+.m-page-inline-2 { color:inherit !important; }
+
+.m-page-inline-3 { color:inherit !important; }
+
+.m-page-inline-4 { font-style:normal !important; }

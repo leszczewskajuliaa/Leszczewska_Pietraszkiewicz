@@ -1,0 +1,1074 @@
+/* MARGINES — style podstrony 404.html */
+/* Styl przeniesiony z 404.html */
+/* DELIKATNE OZDOBY STRONY GŁÓWNEJ */
+
+    body[data-page="index"] .m-card {
+      transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+    }
+
+    body[data-page="index"] .m-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 30px rgba(45, 30, 20, 0.1);
+    }
+
+    .m-home-divider {
+      width: 64px;
+      height: 3px;
+      background: #a97851;
+      border-radius: 10px;
+      margin: 14px 0 20px;
+    }
+
+    .m-coffee-intro {
+      margin-bottom: 24px;
+    }
+
+    /* KARTY KAW */
+
+    .m-coffee-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+      margin-top: 24px;
+    }
+
+    .m-coffee-card {
+      min-width: 0;
+      background: #fffaf4;
+      border: 1px solid rgba(80, 56, 39, 0.14);
+      border-radius: 16px;
+      overflow: hidden;
+      transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+    }
+
+    .m-coffee-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 25px rgba(45, 30, 20, 0.12);
+    }
+
+    .m-coffee-photo {
+      display: block;
+      width: 100%;
+      height: auto;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+    }
+
+    .m-coffee-info {
+      padding: 18px;
+    }
+
+    .m-coffee-info h3 {
+      font-size: 1.15rem;
+      margin-bottom: 8px;
+    }
+
+    .m-coffee-info p {
+      font-size: 0.9rem;
+      line-height: 1.5;
+    }
+
+    .m-coffee-price {
+      margin: 16px 0;
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+    }
+
+    .m-coffee-price strong {
+      font-size: 1.4rem;
+      color: #322116;
+    }
+
+    .m-coffee-price span {
+      font-size: 0.85rem;
+      color: #75665b;
+    }
+
+    .m-coffee-availability {
+      margin: 16px 0 24px;
+      padding: 12px 0 12px 16px;
+      border-left: 3px solid #a97851;
+      color: #67442d;
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+
+    .m-coffee-note {
+      margin-top: 20px;
+      font-size: 0.85rem;
+    }
+
+    @media (max-width: 640px) {
+      .m-coffee-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .m-coffee-card,
+      body[data-page="index"] .m-card {
+        transition: none;
+      }
+    }
+
+    /* ============================================= */
+    /* MIĘKKI, PRZYJAZNY WYGLĄD — część pod zdjęciem */
+    /* ============================================= */
+
+    /* --- Pasek "Odkryj naszą przestrzeń" --- */
+
+    body[data-page="index"] .m-eyebrow {
+      letter-spacing: 0.14em;
+      font-weight: 600;
+      color: #8a6a52;
+    }
+
+    body[data-page="index"] .m-explore-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    body[data-page="index"] .m-explore-chips button {
+      border: 1px solid transparent;
+      background: #f1e6d8;
+      color: #4a3224;
+      border-radius: 999px;
+      padding: 10px 20px;
+      font-weight: 600;
+      box-shadow: 0 2px 6px rgba(80, 56, 39, 0.06);
+      transition:
+        background 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+    }
+
+    body[data-page="index"] .m-explore-chips button:hover {
+      background: #e8d3bb;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 14px rgba(80, 56, 39, 0.12);
+    }
+
+    body[data-page="index"] .m-explore-chips button:focus-visible {
+      outline: 3px solid #d9a46b;
+      outline-offset: 3px;
+    }
+
+    /* --- Sekcje: więcej oddechu, delikatne tło --- */
+
+    body[data-page="index"] .m-section {
+      padding-top: 56px;
+      padding-bottom: 56px;
+    }
+
+    body[data-page="index"] .m-section:nth-of-type(odd) {
+      background: linear-gradient(180deg, #fbf5ec 0%, #f7efe3 100%);
+    }
+
+    body[data-page="index"] .m-section h2 {
+      font-weight: 600;
+      letter-spacing: -0.01em;
+    }
+
+    body[data-page="index"] .m-home-divider {
+      width: 48px;
+      height: 4px;
+      background: #d9a46b;
+      border-radius: 999px;
+    }
+
+    /* Link "Wszystkie →" jako miękki przycisk */
+
+    body[data-page="index"] .m-section a.small[href*="kat="],
+    body[data-page="index"] .m-section a.small[href$="blog.html"],
+    body[data-page="index"] .m-section a.small[href$="wydarzenia.html"] {
+      display: inline-block;
+      padding: 8px 16px;
+      border-radius: 999px;
+      background: #f1e6d8;
+      color: #4a3224;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background 0.2s ease;
+    }
+
+    body[data-page="index"] .m-section a.small[href*="kat="]:hover,
+    body[data-page="index"] .m-section a.small[href$="blog.html"]:hover,
+    body[data-page="index"] .m-section a.small[href$="wydarzenia.html"]:hover {
+      background: #e8d3bb;
+    }
+
+    /* --- Karty książek --- */
+
+    body[data-page="index"] .m-card {
+      border: 0;
+      border-radius: 20px;
+      background: #fffaf4;
+      padding: 10px;
+      box-shadow: 0 4px 16px rgba(80, 56, 39, 0.08);
+      overflow: hidden;
+    }
+
+    body[data-page="index"] .m-card > button {
+      display: block;
+      width: 100%;
+      border-radius: 14px;
+      overflow: hidden;
+    }
+
+    body[data-page="index"] .m-card .m-cover {
+      border-radius: 14px;
+      overflow: hidden;
+    }
+
+    body[data-page="index"] .m-card .card-body {
+      padding: 14px 8px 8px;
+    }
+
+    body[data-page="index"] .m-card .card-title {
+      font-size: 1.05rem;
+      font-weight: 600;
+    }
+
+    /* Okrągły, ciepły przycisk "+" */
+
+    body[data-page="index"] .m-card .m-icon-btn[data-add] {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: #f1e6d8;
+      color: #4a3224;
+      border: 0;
+      font-size: 1.3rem;
+      font-weight: 600;
+      line-height: 1;
+      transition:
+        background 0.2s ease,
+        color 0.2s ease,
+        transform 0.2s ease;
+    }
+
+    body[data-page="index"] .m-card .m-icon-btn[data-add]:hover {
+      background: #a97851;
+      color: #fff;
+      transform: scale(1.08);
+    }
+
+    /* --- Wydarzenia i blog: łagodniejsze --- */
+
+    body[data-page="index"] .m-section time.border {
+      border-color: transparent !important;
+      background: #f1e6d8;
+      border-radius: 14px !important;
+    }
+
+    body[data-page="index"] .m-section .border-top {
+      border-color: rgba(80, 56, 39, 0.1) !important;
+    }
+
+    /* --- Okienka (popupy) --- */
+
+    .m-mini .m-cover {
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    .m-coffee-card {
+      border-radius: 20px;
+    }
+
+    .btn.btn-m-dark {
+      border-radius: 999px;
+      padding: 10px 24px;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      body[data-page="index"] .m-explore-chips button,
+      body[data-page="index"] .m-card .m-icon-btn[data-add] {
+        transition: none;
+      }
+    }
+    /* --- Oferta kaw na stronie głównej --- */
+
+    .m-offer-card {
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 4px 16px rgba(80, 56, 39, 0.08);
+      border: 0;
+    }
+
+    .m-offer-card .m-coffee-info {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+
+/* --- Szersze okno "Nasza kawa" (tylko to okienko) --- */
+
+    .m-panel:has(.m-coffee-grid) {
+      width: min(880px, 100%);
+      --px: 2.25rem;
+    }
+
+    .m-panel:has(.m-coffee-grid) .m-coffee-info h3 {
+      overflow-wrap: anywhere;
+    }
+
+    @media (max-width: 640px) {
+      .m-panel:has(.m-coffee-grid) {
+        --px: 1.25rem;
+      }
+    }
+    /* ============================================= */
+    /* INTERAKTYWNE OZDOBY STRONY GŁÓWNEJ            */
+    /* ============================================= */
+
+    /* --- Wjeżdżające sekcje (klasy dodaje skrypt) --- */
+
+    .m-reveal {
+      opacity: 0;
+      transform: translateY(26px);
+      transition:
+        opacity 0.7s ease var(--d, 0ms),
+        transform 0.7s cubic-bezier(0.2, 0.7, 0.2, 1) var(--d, 0ms);
+    }
+
+    .m-reveal.is-in {
+      opacity: 1;
+      transform: none;
+    }
+
+    /* --- Pływające kształty w tle sekcji --- */
+
+    body[data-page="index"] .m-section {
+      position: relative;
+    }
+
+    body[data-page="index"] .m-section > .container {
+      position: relative;
+      z-index: 1;
+    }
+
+    .m-deco-layer {
+      position: absolute;
+      inset: 0;
+      overflow: hidden;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .m-deco {
+      position: absolute;
+      will-change: transform;
+    }
+
+    .m-deco i {
+      display: block;
+      animation: m-float var(--dur, 9s) ease-in-out infinite alternate;
+    }
+
+    .m-deco .circle {
+      width: var(--s);
+      height: var(--s);
+      border-radius: 50%;
+      background: var(--col);
+    }
+
+    .m-deco .arch {
+      width: var(--s);
+      height: var(--s);
+      border-radius: 50% 50% 0 0;
+      background: var(--col);
+    }
+
+    .m-deco .square {
+      width: var(--s);
+      height: var(--s);
+      border-radius: 6px;
+      background: var(--col);
+      transform: rotate(14deg);
+    }
+
+    .m-deco .ring {
+      width: var(--s);
+      height: var(--s);
+      border-radius: 50%;
+      border: 3px solid var(--col);
+    }
+
+    @keyframes m-float {
+      from { translate: 0 -10px; rotate: -4deg; }
+      to   { translate: 0 12px;  rotate: 5deg; }
+    }
+
+    /* --- Okładki książek: pochylanie i połysk --- */
+
+    body[data-page="index"] .m-card .m-cover::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      opacity: 0;
+      background: radial-gradient(
+        circle at var(--gx, 50%) var(--gy, 50%),
+        rgba(255, 255, 255, 0.38),
+        transparent 55%
+      );
+      transition: opacity 0.25s ease;
+      z-index: 2;
+    }
+
+    body[data-page="index"] .m-card .m-cover.is-tilt::before {
+      opacity: 1;
+    }
+
+    /* --- Zdjęcia kaw: delikatny zoom --- */
+
+    .m-offer-card .m-coffee-photo {
+      transition: transform 0.7s cubic-bezier(0.2, 0.7, 0.2, 1);
+    }
+
+    .m-offer-card:hover .m-coffee-photo {
+      transform: scale(1.06);
+    }
+
+    /* --- Ziarna i iskierki po dodaniu do koszyka --- */
+
+    .m-burst {
+      position: fixed;
+      z-index: 1200;
+      pointer-events: none;
+    }
+
+    .m-burst.bean {
+      width: 12px;
+      height: 8px;
+      border-radius: 50%;
+      background: #4a2c1a;
+    }
+
+    .m-burst.bean::after {
+      content: "";
+      position: absolute;
+      left: 2px;
+      right: 2px;
+      top: 50%;
+      height: 1.5px;
+      margin-top: -0.75px;
+      background: #24140b;
+      border-radius: 2px;
+      transform: rotate(-12deg);
+    }
+
+    .m-burst.spark {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+    }
+
+    /* --- Przycisk "wróć na górę" z paskiem postępu --- */
+
+    .m-top {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      z-index: 1000;
+      width: 52px;
+      height: 52px;
+      padding: 0;
+      border: 0;
+      border-radius: 50%;
+      background: #fffaf4;
+      color: #4a3224;
+      box-shadow: 0 6px 20px rgba(80, 56, 39, 0.2);
+      cursor: pointer;
+      opacity: 0;
+      transform: translateY(16px) scale(0.9);
+      pointer-events: none;
+      transition:
+        opacity 0.3s ease,
+        transform 0.3s ease,
+        background 0.2s ease;
+    }
+
+    .m-top.is-on {
+      opacity: 1;
+      transform: none;
+      pointer-events: auto;
+    }
+
+    .m-top:hover {
+      background: #f1e6d8;
+    }
+
+    .m-top svg {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    .m-top .track {
+      fill: none;
+      stroke: #ead9c4;
+      stroke-width: 3;
+    }
+
+    .m-top .bar {
+      fill: none;
+      stroke: #a97851;
+      stroke-width: 3;
+      stroke-linecap: round;
+      transform: rotate(-90deg);
+      transform-origin: 50% 50%;
+    }
+
+    .m-top .arrow {
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .m-reveal {
+        opacity: 1;
+        transform: none;
+        transition: none;
+      }
+
+      .m-deco i,
+      .m-offer-card .m-coffee-photo {
+        animation: none;
+        transition: none;
+      }
+    }
+    /* ============================================= */
+    /* MIĘKKIE, PRZYJAZNE PANELE WYSUWANE            */
+    /* ============================================= */
+
+    /* --- Tło i sam panel --- */
+
+    .m-backdrop {
+      background: rgba(58, 37, 26, 0.38);
+      -webkit-backdrop-filter: blur(4px);
+      backdrop-filter: blur(4px);
+    }
+
+    .m-panel {
+      --px: 1.9rem;
+      --pt: 1.4rem;
+      padding: var(--pt) var(--px) 2.4rem;
+      border: 0;
+      border-radius: 28px 0 0 28px;
+      background: linear-gradient(180deg, #fffaf4 0%, #f8efe2 100%);
+      box-shadow: -18px 0 50px rgba(45, 30, 20, 0.22);
+      animation: m-slide 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+      scrollbar-width: thin;
+      scrollbar-color: #d9bf9f transparent;
+    }
+
+    .m-panel:focus,
+    .m-panel:focus-visible {
+      outline: none !important;
+    }
+
+    /* nagłówek panelu zostaje na wierzchu przy przewijaniu */
+
+    .m-panel > .d-flex:first-child {
+      position: sticky;
+      top: calc(var(--pt) * -1);
+      z-index: 5;
+      margin: calc(var(--pt) * -1) calc(var(--px) * -1) 1.2rem !important;
+      padding: var(--pt) var(--px) 0.9rem;
+      background: linear-gradient(180deg, #fffaf4 72%, rgba(255, 250, 244, 0));
+    }
+
+    .m-panel > .d-flex:first-child .m-eyebrow {
+      background: #f1e6d8;
+      color: #7a5a43;
+      padding: 7px 14px;
+      border-radius: 999px;
+      letter-spacing: 0.14em;
+    }
+
+    .m-close {
+      width: 44px;
+      height: 44px;
+      border: 0;
+      border-radius: 50%;
+      background: #f1e6d8;
+      color: #4a3224;
+      transition: background 0.2s ease, transform 0.25s ease;
+    }
+
+    .m-close:hover {
+      background: #e8d3bb;
+      transform: rotate(90deg);
+    }
+
+    /* --- Teksty --- */
+
+    .m-panel h2 {
+      font-weight: 600;
+      letter-spacing: -0.02em;
+    }
+
+    .m-panel h2::after {
+      content: "";
+      display: block;
+      width: 44px;
+      height: 4px;
+      margin: 14px 0 6px;
+      background: #d9a46b;
+      border-radius: 999px;
+    }
+
+    .m-panel .m-eyebrow {
+      color: #8a6a52;
+    }
+
+    .m-panel .text-muted-m {
+      color: #75665b;
+    }
+
+    /* --- Wejście zawartości: łagodne wsuwanie --- */
+
+    @keyframes m-rise {
+      from { opacity: 0; transform: translateY(14px); }
+      to   { opacity: 1; transform: none; }
+    }
+
+    .m-panel > :nth-child(n + 2) {
+      animation: m-rise 0.55s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+    }
+
+    .m-panel > :nth-child(2) { animation-delay: 0.10s; }
+    .m-panel > :nth-child(3) { animation-delay: 0.16s; }
+    .m-panel > :nth-child(4) { animation-delay: 0.22s; }
+    .m-panel > :nth-child(5) { animation-delay: 0.28s; }
+    .m-panel > :nth-child(6) { animation-delay: 0.34s; }
+    .m-panel > :nth-child(n + 7) { animation-delay: 0.4s; }
+
+    /* --- Miniatury okładek (Książki, Plakaty, Nowości, Magazyny) --- */
+
+    .m-panel .m-mini {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 1.2rem;
+    }
+
+    /* dokładnie trzy pozycje (np. Nowości) mieszczą się w jednym rzędzie */
+    .m-panel .m-mini:has(> :nth-child(3):last-child) {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .m-panel .m-mini button {
+      display: block;
+      width: 100%;
+      padding: 10px 10px 12px;
+      border-radius: 20px;
+      background: #fffaf4;
+      box-shadow: 0 4px 14px rgba(80, 56, 39, 0.09);
+      transition: transform 0.3s cubic-bezier(0.2, 0.7, 0.2, 1), box-shadow 0.3s ease;
+      animation: m-rise 0.55s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+    }
+
+    .m-panel .m-mini button:nth-child(1) { animation-delay: 0.20s; }
+    .m-panel .m-mini button:nth-child(2) { animation-delay: 0.26s; }
+    .m-panel .m-mini button:nth-child(3) { animation-delay: 0.32s; }
+    .m-panel .m-mini button:nth-child(4) { animation-delay: 0.38s; }
+
+    .m-panel .m-mini button:hover,
+    .m-panel .m-mini button:focus-visible {
+      transform: translateY(-5px);
+      box-shadow: 0 14px 28px rgba(45, 30, 20, 0.16);
+    }
+
+    .m-panel .m-mini button:hover .m-cover {
+      transform: none;
+    }
+
+    .m-panel .m-cover {
+      border-radius: 14px;
+      overflow: hidden;
+    }
+
+    .m-panel .m-mini .t2 {
+      margin-top: 10px;
+      font-size: 0.82rem;
+      color: #322116;
+    }
+
+    .m-panel .m-mini .p2 {
+      display: inline-block;
+      margin-top: 6px;
+      padding: 2px 10px;
+      border-radius: 999px;
+      background: #f1e6d8;
+      color: #5a4535;
+      font-size: 0.74rem;
+      font-weight: 600;
+    }
+
+    /* --- Listy: godziny jako jedna karta, spotkania i koszyk jako osobne karty --- */
+
+    .m-panel .list-group.m-list {
+      background: #fffaf4;
+      border-radius: 20px;
+      padding: 0.3rem 1.3rem;
+      box-shadow: 0 4px 14px rgba(80, 56, 39, 0.08);
+    }
+
+    .m-panel .list-group.m-list .list-group-item {
+      padding: 0.9rem 0;
+      border-color: rgba(80, 56, 39, 0.1);
+    }
+
+    .m-panel .list-group.m-list .list-group-item:first-child {
+      border-top: 0;
+    }
+
+    .m-panel .list-group.m-list .list-group-item:last-child {
+      border-bottom: 0;
+    }
+
+    .m-panel .list-group.m-list:has(.m-badge),
+    .m-panel .list-group.m-list:has(.m-cover) {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      padding: 0;
+      background: transparent;
+      box-shadow: none;
+    }
+
+    .m-panel .list-group.m-list:has(.m-badge) .list-group-item,
+    .m-panel .list-group.m-list:has(.m-cover) .list-group-item {
+      background: #fffaf4;
+      border: 0;
+      border-radius: 20px;
+      padding: 1.1rem 1.3rem;
+      box-shadow: 0 4px 14px rgba(80, 56, 39, 0.09);
+      transition: transform 0.3s cubic-bezier(0.2, 0.7, 0.2, 1), box-shadow 0.3s ease;
+    }
+
+    .m-panel .list-group.m-list:has(.m-badge) .list-group-item:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 26px rgba(45, 30, 20, 0.14);
+    }
+
+    .m-panel .badge.m-badge {
+      background: #f6e3c4;
+      color: #5a3a1e;
+      padding: 7px 12px;
+      letter-spacing: 0.05em;
+    }
+
+    .m-panel .m-img {
+      border-radius: 20px;
+      box-shadow: 0 8px 24px rgba(80, 56, 39, 0.16);
+    }
+
+    /* --- Przyciski w panelach --- */
+
+    .m-panel .btn {
+      border-radius: 999px;
+      padding: 0.75rem 1.5rem;
+    }
+
+    .m-panel .btn-m-dark {
+      background: #322116;
+      border-color: #322116;
+      box-shadow: 0 6px 16px rgba(50, 33, 22, 0.22);
+      transition: background 0.2s ease, transform 0.2s ease;
+    }
+
+    .m-panel .btn-m-dark:hover {
+      background: #67442d;
+      border-color: #67442d;
+      transform: translateY(-2px);
+    }
+
+    .m-panel .btn-m-line {
+      background: #f1e6d8;
+      border-color: transparent;
+      color: #4a3224;
+      transition: background 0.2s ease, transform 0.2s ease;
+    }
+
+    .m-panel .btn-m-line:hover {
+      background: #e8d3bb;
+      color: #322116;
+      transform: translateY(-2px);
+    }
+
+    .m-panel .btn-link {
+      color: #a0583a;
+      text-decoration: none;
+    }
+
+    .m-panel .btn-link:hover {
+      color: #7a3f27;
+      text-decoration: underline;
+    }
+
+    /* --- Koszyk --- */
+
+    .m-panel .list-group-item .btn.btn-m-line.px-3 {
+      min-height: 36px;
+      padding: 0.2rem 0.85rem;
+    }
+
+    .m-panel .d-flex.fs-5 {
+      background: #f1e6d8;
+      border-radius: 18px;
+      padding: 14px 20px;
+    }
+
+    .m-panel .w-100.btn {
+      padding: 0.95rem 1.5rem;
+    }
+
+    /* mini-okładka w koszyku: tekst skalowany, żeby się mieścił */
+
+    .m-panel [style*="width:56px"] .m-cover {
+      padding: 0.4rem 0.35rem;
+      border-radius: 8px;
+    }
+
+    .m-panel [style*="width:56px"] .m-cover .a {
+      font-size: 0.3rem;
+      letter-spacing: 0.04em;
+    }
+
+    .m-panel [style*="width:56px"] .m-cover .t {
+      font-size: 0.5rem !important;
+      letter-spacing: -0.01em;
+    }
+
+    /* --- Powiadomienie --- */
+
+    .m-toast {
+      border-radius: 999px;
+      padding: 0.85rem 1.5rem;
+      background: #322116;
+      box-shadow: 0 10px 28px rgba(45, 30, 20, 0.3);
+    }
+
+    /* --- Telefon --- */
+
+    @media (max-width: 520px) {
+      /* na telefonie panel wysuwa się od dołu jak arkusz */
+      .m-panel {
+        --px: 1.25rem;
+        top: auto;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100% !important;
+        height: auto;
+        max-height: 92vh;
+        max-height: 92dvh;
+        border-radius: 28px 28px 0 0;
+        box-shadow: 0 -14px 40px rgba(45, 30, 20, 0.25);
+        animation: m-sheet 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+
+      .m-panel .m-mini,
+      .m-panel .m-mini:has(> :nth-child(3):last-child) {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @keyframes m-sheet {
+      from { transform: translateY(100%); }
+      to   { transform: none; }
+    }
+
+    /* Wysuwana wyszukiwarka: niższy panel, bez zmiany jego szerokości. */
+    #m-search {
+      max-width: 400px !important;
+      height: auto !important;
+      min-height: 0 !important;
+      padding-top: 6px !important;
+      padding-bottom: 6px !important;
+      border-radius: 22px !important;
+      box-sizing: border-box;
+    }
+    #m-search input {
+      height: 36px !important;
+      min-height: 0 !important;
+      padding: 5px 12px !important;
+      border-radius: 14px !important;
+      box-sizing: border-box;
+    }
+    /* Wyszukiwarka rozwija się pod paskiem nawigacji,
+       dzięki czemu kategorie i koszyk pozostają widoczne. */
+    .m-nav { position: relative; }
+    .m-nav #m-search {
+      position: absolute !important;
+      right: 100px !important;
+      top: 100% !important;
+      left: auto !important;
+      transform: none !important;
+      z-index: 20;
+      width: min(400px, calc(100vw - 120px)) !important;
+    }
+    @media (max-width: 520px) {
+      .m-nav #m-search {
+        right: 100px !important;
+        width: min(260px, calc(100vw - 120px)) !important;
+      }
+    }
+    /* Pole wyszukiwania i przycisk „Szukaj” w jednym rzędzie. */
+    #m-search form,
+    #m-search .input-group,
+    #m-search .d-flex {
+      display: flex !important;
+      flex-direction: row !important;
+      flex-wrap: nowrap !important;
+      align-items: center !important;
+      gap: 8px !important;
+      width: 100%;
+    }
+    #m-search input[type="search"],
+    #m-search input[type="text"] {
+      flex: 1 1 0 !important;
+      width: 0 !important;
+      min-width: 0 !important;
+      margin: 0 !important;
+    }
+    #m-search button[type="submit"],
+    #m-search input[type="submit"] {
+      flex: 0 0 auto !important;
+      width: auto !important;
+      white-space: nowrap !important;
+      margin: 0 !important;
+    }
+    @media (max-width: 520px) {
+      .m-nav #m-search {
+        right: 12px !important;
+        width: min(400px, calc(100vw - 24px)) !important;
+      }
+      #m-search { max-width: calc(100vw - 24px) !important; }
+    }
+    /* Lupa i koszyk zawsze przy prawej krawędzi paska nawigacji. */
+    .m-nav > .container-fluid > .d-flex.order-lg-3 {
+      margin-left: auto;
+      flex-shrink: 0;
+    }
+    /* Kompaktowa stopka: mniejsze odstępy i godziny blisko dni. */
+    .m-footer { padding-top: 32px !important; padding-bottom: 22px !important; }
+    .m-footer > .container > .row { --bs-gutter-y: 18px; }
+    .m-footer .m-eyebrow { margin-bottom: 12px; }
+    .m-footer .list-unstyled { margin-bottom: 0; }
+    .m-footer .list-unstyled li { padding-top: 3px !important; padding-bottom: 3px !important; }
+    .m-footer .m-footer-hours li {
+      display: grid !important;
+      grid-template-columns: 82px max-content;
+      justify-content: start !important;
+      column-gap: 12px;
+      align-items: baseline;
+    }
+    .m-footer .m-footer-hours li span:last-child { white-space: nowrap; }
+    .m-footer > .container > p:last-child { margin-top: 24px !important; padding-top: 12px; border-top: 1px solid rgba(255,255,255,.16); }
+    @media (max-width: 575px) {
+      .m-footer { padding-top: 26px !important; }
+      .m-footer .m-footer-hours li { grid-template-columns: 76px max-content; column-gap: 8px; }
+    }
+
+    /* Telefon: nie ściskamy siedmiu hotspotów na pomniejszonym zdjęciu.
+       Te same interaktywne przyciski z nazwami są dostępne pod zdjęciem. */
+    @media (max-width: 767.98px) {
+      .m-stage .m-hot2 { display: none !important; }
+      .m-explore-chips { display: grid !important; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; width: 100%; }
+      .m-explore-chips button { display: block !important; width: 100%; min-width: 0; min-height: 44px; padding: 10px 12px !important; white-space: normal !important; overflow-wrap: anywhere; font-size: 0.9rem; line-height: 1.3; text-align: center; }
+    }
+    @media (max-width: 350px) {
+      .m-explore-chips { grid-template-columns: 1fr; }
+    }
+  
+/* Wyszukiwarka: input i przycisk zawsze w jednym rzędzie (także mobile). */
+nav.m-nav form#m-search {
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: nowrap !important;
+  align-items: center !important;
+  gap: 8px !important;
+  padding: 8px !important;
+  max-width: min(420px, calc(100vw - 24px)) !important;
+  box-sizing: border-box;
+}
+nav.m-nav form#m-search > input.form-control {
+  flex: 1 1 auto !important;
+  width: 1px !important;
+  min-width: 0 !important;
+  max-width: none !important;
+  margin: 0 !important;
+  height: 38px !important;
+}
+nav.m-nav form#m-search > button[type="submit"] {
+  display: inline-flex !important;
+  flex: 0 0 auto !important;
+  align-items: center;
+  justify-content: center;
+  width: auto !important;
+  min-width: 0 !important;
+  min-height: 38px !important;
+  height: 38px !important;
+  padding: 0 14px !important;
+  margin: 0 !important;
+  white-space: nowrap !important;
+  font-size: 0.85rem;
+}
+@media (max-width: 520px) {
+  nav.m-nav form#m-search {
+    right: 12px !important;
+    width: calc(100vw - 24px) !important;
+  }
+}
+
+.m-page-inline-1 { min-height:65vh !important; }
+
+.m-page-inline-2 { font-size:clamp(6rem,18vw,12rem) !important; font-weight:800 !important; line-height:1 !important; color:#8a5b3e !important; }
+
+.m-page-inline-3 { max-width:620px !important; }
+
+.m-page-inline-4 { max-width:520px !important; }
+
+.m-page-inline-5 { color:inherit !important; }
+
+.m-page-inline-6 { color:inherit !important; }
+
+.m-page-inline-7 { color:inherit !important; }
+
+.m-page-inline-8 { font-style:normal !important; }
+
+.m-page-inline-9 { --c-bg:oklch(0.93 0.025 85) !important; --c-fg:oklch(0.25 0.02 60) !important; --c-acc:oklch(0.47 0.06 120) !important; --c-r:50% !important; --c-align:center !important; }
+
+.m-page-inline-10 { --c-bg:oklch(0.18 0.005 60) !important; --c-fg:oklch(0.95 0.01 80) !important; --c-acc:oklch(0.95 0.01 80) !important; --c-r:0 !important; --c-align:center !important; }
+
+.m-page-inline-11 { --c-bg:oklch(0.58 0.12 42) !important; --c-fg:oklch(0.97 0.01 80) !important; --c-acc:oklch(0.86 0.05 70) !important; --c-r:50% !important; --c-align:flex-end !important; }
+
+.m-page-inline-12 { --c-bg:oklch(0.88 0.008 80) !important; --c-fg:oklch(0.2 0.01 60) !important; --c-acc:oklch(0.3 0.01 60) !important; --c-r:50% 50% 0 0 !important; --c-align:center !important; }
+
+.m-page-inline-13 { --c-bg:oklch(0.62 0.12 45) !important; --c-fg:oklch(0.97 0.01 80) !important; --c-acc:oklch(0.3 0.04 50) !important; --c-r:50% 0 50% 0 !important; --c-align:center !important; }
+
+.m-page-inline-14 { --c-bg:oklch(0.95 0.005 85) !important; --c-fg:oklch(0.2 0.01 60) !important; --c-acc:oklch(0.25 0.01 60) !important; --c-r:50% 50% 0 0 !important; --c-align:center !important; }
+
+.m-page-inline-15 { --c-bg:oklch(0.93 0.025 85) !important; --c-fg:oklch(0.25 0.02 60) !important; --c-acc:oklch(0.47 0.06 120) !important; --c-r:50% !important; --c-align:center !important; }
+
+.m-page-inline-16 { --c-bg:oklch(0.18 0.005 60) !important; --c-fg:oklch(0.95 0.01 80) !important; --c-acc:oklch(0.95 0.01 80) !important; --c-r:0 !important; --c-align:center !important; }
+
+.m-page-inline-17 { --c-bg:oklch(0.58 0.12 42) !important; --c-fg:oklch(0.97 0.01 80) !important; --c-acc:oklch(0.86 0.05 70) !important; --c-r:50% !important; --c-align:flex-end !important; }
+
+.m-page-inline-18 { --c-bg:oklch(0.9 0.03 115) !important; --c-fg:oklch(0.25 0.02 60) !important; --c-acc:oklch(0.47 0.06 120) !important; --c-r:0 !important; --c-align:center !important; }
+
+.m-page-inline-19 { --c-bg:oklch(0.2 0.01 60) !important; --c-fg:oklch(0.9 0.15 125) !important; --c-acc:oklch(0.9 0.15 125) !important; --c-r:0 !important; --c-align:flex-end !important; }

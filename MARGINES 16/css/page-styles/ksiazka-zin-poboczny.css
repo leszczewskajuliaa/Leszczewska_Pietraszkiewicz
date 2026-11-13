@@ -1,0 +1,14 @@
+/* MARGINES — style podstrony ksiazka-zin-poboczny.html */
+.m-page-inline-1 { --c-bg:oklch(0.88 0.08 95) !important; --c-fg:oklch(0.2 0.01 60) !important; --c-acc:oklch(0.56 0.12 42) !important; --c-r:0 !important; --c-align:flex-end !important; }
+
+.m-page-inline-2 { font-size:2.2rem !important; }
+
+.m-page-inline-3 { --c-bg:oklch(0.95 0.015 80) !important; --c-fg:oklch(0.36 0.05 50) !important; --c-acc:oklch(0.36 0.05 50) !important; --c-r:50% 50% 50% 0 !important; --c-align:center !important; }
+
+.m-page-inline-4 { color:inherit !important; }
+
+.m-page-inline-5 { color:inherit !important; }
+
+.m-page-inline-6 { color:inherit !important; }
+
+.m-page-inline-7 { font-style:normal !important; }

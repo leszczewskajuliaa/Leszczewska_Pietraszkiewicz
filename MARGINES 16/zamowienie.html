@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+
+<html lang="pl"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Finalizacja zamówienia | MARGINES</title><meta content="Dane zamówienia, dostawa, płatność i podsumowanie koszyka MARGINES." name="description"/>
+<link href="favicon.ico" rel="icon" type="image/x-icon"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;600;700&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="css/bootstrap.min.css" rel="stylesheet"/><link href="css/style.css" rel="stylesheet"/>
+<link href="css/nav-account.css" rel="stylesheet"/>
+<link href="css/help-module.css" rel="stylesheet"/><link rel="stylesheet" href="css/page-styles/zamowienie.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head><body data-page="zamowienie">
+<header>
+<a class="skip-link" href="#main">
+    Przejdź do treści
+   </a>
+<nav aria-label="Główna nawigacja" class="navbar navbar-expand-lg m-nav sticky-top">
+<div class="container-fluid px-3 px-lg-4">
+<a class="navbar-brand me-4" href="index.html">
+<span class="m-logo">MARGINES</span>
+<span class="m-tag">BOOKS · COFFEE · CULTURE</span>
+</a>
+<div class="d-flex align-items-center order-lg-3">
+<!-- WYSZUKIWARKA -->
+<button aria-controls="m-search" aria-expanded="false" aria-label="Szukaj książek" class="m-icon-btn" type="button">
+<svg aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6" viewbox="0 0 24 24" width="20">
+<path d="M11 19a8 8 0 1 0 0-16 8 8 0 0 0 0 16Zm10 2-4.35-4.35"></path>
+</svg>
+</button>
+<!-- KOSZYK -->
+<button aria-label="Koszyk, produktów: 0" class="m-icon-btn" type="button">
+<svg aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6" viewbox="0 0 24 24" width="20">
+<path d="M6 7h12l-1 13H7L6 7Zm3 0V5a3 3 0 0 1 6 0v2"></path>
+</svg>
+</button><a aria-label="Moje konto" class="m-account-nav-link m-icon-btn" href="konto.html" title="Moje konto"><svg aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" viewbox="0 0 24 24" width="20"><circle cx="12" cy="8" r="4"></circle><path d="M4.5 21v-2a7.5 7.5 0 0 1 15 0v2"></path></svg></a>
+<!-- MENU MOBILNE -->
+<button aria-controls="m-menu" aria-expanded="false" aria-label="Menu" class="navbar-toggler ms-1" type="button">
+<span class="navbar-toggler-icon"></span>
+</button>
+</div>
+<div class="collapse navbar-collapse order-lg-2" id="m-menu">
+<ul class="navbar-nav ms-lg-auto me-lg-3">
+<li class="nav-item">
+<a class="nav-link" href="ksiazki.html">
+                Książki
+              </a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="kawiarnia.html">
+                Kawiarnia
+              </a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="wydarzenia.html">
+                Wydarzenia
+              </a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="blog.html">
+                Journal
+              </a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="o-nas.html">
+                O nas
+              </a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="kontakt.html">
+                Kontakt
+              </a>
+</li>
+</ul>
+</div>
+</div>
+</nav>
+</header>
+<main id="main"><div class="container m-breadcrumb-wrap"><nav aria-label="Ścieżka okruszkowa" class="m-breadcrumb-nav"><ol class="breadcrumb m-breadcrumb-list"><li class="breadcrumb-item"><a href="index.html">Strona główna</a></li><li aria-current="page" class="breadcrumb-item active">Finalizacja zamówienia</li></ol></nav></div><div class="checkout-shell"><a class="checkout-back" href="ksiazki.html">← Wróć do książek</a><p class="checkout-eyebrow mt-4 mb-0">Twój koszyk · Krok 2 z 2</p><h1 class="checkout-title">Finalizacja zamówienia</h1><p class="checkout-intro">Jeszcze kilka informacji i gotowe. Wybierz dostawę, sposób płatności i sprawdź swoje zamówienie.</p>
+<div class="checkout-layout" id="checkout-content"><form class="checkout-stack" id="checkout-form" novalidate="">
+<section aria-labelledby="personal-title" class="checkout-panel"><h2 id="personal-title"><span class="checkout-step">1</span> Dane kontaktowe</h2><div class="checkout-fields">
+<div class="checkout-field"><label for="first-name">Imię *</label><input autocomplete="given-name" id="first-name" name="firstName" required=""/></div>
+<div class="checkout-field"><label for="last-name">Nazwisko *</label><input autocomplete="family-name" id="last-name" name="lastName" required=""/></div>
+<div class="checkout-field"><label for="email">Adres e-mail *</label><input autocomplete="email" id="email" name="email" required="" type="email"/></div>
+<div class="checkout-field"><label for="phone">Numer telefonu *</label><input autocomplete="tel" id="phone" name="phone" pattern="[+0-9 ()-]{7,20}" required="" type="tel"/></div></div><div class="checkout-invoice"><label class="checkout-check"><input id="want-invoice" name="wantInvoice" type="checkbox"/><span>Chcę otrzymać fakturę na firmę</span></label><div class="checkout-fields checkout-hidden" id="invoice-fields"><div class="checkout-field wide"><label for="company-name">Nazwa firmy *</label><input autocomplete="organization" id="company-name" name="companyName"/></div><div class="checkout-field"><label for="company-nip">NIP (10 cyfr) *</label><input id="company-nip" inputmode="numeric" maxlength="10" name="nip" pattern="[0-9]{10}" placeholder="1234567890"/></div></div></div></section>
+<section aria-labelledby="delivery-title" class="checkout-panel"><h2 id="delivery-title"><span class="checkout-step">2</span> Sposób dostawy</h2><div class="checkout-options">
+<label class="checkout-option"><input checked="" name="delivery" type="radio" value="locker"/><span><strong>Paczkomat</strong><small>Odbiór w wybranym punkcie — orientacyjnie 1–3 dni robocze</small></span><span class="checkout-price">12,99 zł</span></label>
+<label class="checkout-option"><input name="delivery" type="radio" value="courier"/><span><strong>Kurier</strong><small>Dostawa pod wskazany adres — orientacyjnie 1–3 dni robocze</small></span><span class="checkout-price">16,99 zł</span></label>
+<label class="checkout-option"><input name="delivery" type="radio" value="pickup"/><span><strong>Odbiór osobisty</strong></span><span class="checkout-price">0 zł</span></label></div>
+<div class="checkout-fields mt-4" id="address-fields"><div class="checkout-field wide"><label for="street">Ulica i numer domu / mieszkania *</label><input autocomplete="street-address" id="street" name="street" required=""/></div><div class="checkout-field"><label for="postal">Kod pocztowy *</label><input autocomplete="postal-code" id="postal" name="postal" pattern="[0-9]{2}-[0-9]{3}" placeholder="00-000" required=""/></div><div class="checkout-field"><label for="city">Miasto *</label><input autocomplete="address-level2" id="city" name="city" required=""/></div><div class="checkout-field wide"><label for="country">Kraj</label><select id="country" name="country"><option value="Polska">Polska</option></select></div></div>
+<div class="checkout-fields mt-3" id="locker-fields"><div class="checkout-field wide"><label for="locker-code">Kod lub adres paczkomatu *</label><input id="locker-code" name="lockerCode" placeholder="np. WAW01M lub adres punktu" required=""/></div></div><p class="checkout-note">Dla paczkomatu podaj również adres kontaktowy. Przy odbiorze osobistym adres nie jest wymagany.</p></section>
+<section aria-labelledby="payment-title" class="checkout-panel"><h2 id="payment-title"><span class="checkout-step">3</span> Metoda płatności</h2><div class="checkout-options">
+<label class="checkout-option"><input checked="" name="payment" type="radio" value="blik"/><span><strong>BLIK</strong><small>Wybór demonstracyjny — bez połączenia z operatorem płatności</small></span></label>
+<label class="checkout-option"><input name="payment" type="radio" value="card"/><span><strong>Karta płatnicza</strong><small>Visa / Mastercard — dane karty nie są zbierane na tej stronie</small></span></label>
+<label class="checkout-option"><input name="payment" type="radio" value="transfer"/><span><strong>Przelew tradycyjny</strong><small>Instrukcje płatności wymagałyby konfiguracji prawdziwego sklepu</small></span></label>
+<label class="checkout-option"><input name="payment" type="radio" value="pickup"/><span><strong>Płatność przy odbiorze osobistym</strong><small>Dostępna wyłącznie dla odbioru w księgarni</small></span></label></div></section>
+<section aria-labelledby="notes-title" class="checkout-panel"><h2 id="notes-title"><span class="checkout-step">4</span> Uwagi do zamówienia</h2><div class="checkout-field"><label for="notes">Wiadomość (opcjonalnie)</label><textarea id="notes" name="notes" placeholder="Np. dodatkowe informacje dotyczące dostawy"></textarea></div><label class="checkout-check"><input id="accept" required="" type="checkbox"/><span>Rozumiem, że jest to projekt edukacyjny, a wysłanie formularza nie powoduje rzeczywistego zakupu ani płatności. *</span></label><label class="checkout-check"><input id="accept-terms" required="" type="checkbox"/><span>Zapoznałem/am się z <a href="regulamin.html">regulaminem demonstracyjnym</a> i akceptuję jego warunki. *</span></label><label class="checkout-check"><input id="accept-privacy" required="" type="checkbox"/><span>Zapoznałem/am się z <a href="polityka-prywatnosci.html">polityką prywatności</a>. *</span></label></section></form>
+<aside aria-labelledby="summary-title" class="checkout-panel checkout-summary"><h2 id="summary-title">Podsumowanie zamówienia</h2><div aria-live="polite" id="checkout-items"><p class="checkout-small">Sprawdzam zawartość koszyka…</p></div><div class="checkout-totals"><div class="checkout-total-row"><span>Produkty</span><strong id="subtotal">0,00 zł</strong></div><div class="checkout-total-row"><span>Dostawa</span><strong id="shipping">12,99 zł</strong></div><div class="checkout-total-row final"><span>Razem</span><span id="grand-total">12,99 zł</span></div></div><div class="checkout-alert" id="checkout-notice" role="status">To wersja demonstracyjna. Nie realizujemy płatności ani wysyłki.</div><button class="checkout-submit" disabled="" form="checkout-form" id="place-order" type="submit">Potwierdź zamówienie (demo)</button><p class="checkout-small mt-3 mb-0">Kwoty dostawy są przykładowe. Płatność nie zostanie pobrana.</p></aside></div>
+<div aria-live="polite" class="checkout-success checkout-hidden" id="checkout-success" role="status"><p class="checkout-eyebrow">Potwierdzenie demonstracyjne</p><h2>Zamówienie demonstracyjne zostało potwierdzone</h2><p>To tylko symulacja — nie wysłaliśmy zamówienia do sklepu i nie pobraliśmy płatności.</p><p id="checkout-success-details"></p><a class="checkout-back" href="index.html">Wróć na stronę główną →</a><a class="btn btn-m-line mt-3" href="konto.html">Przejdź do mojego konta →</a></div>
+</div></main>
+<footer class="m-footer mt-5">
+<div class="container">
+<div class="row g-4">
+<div class="col-12 col-md-4">
+<span class="m-logo">MARGINES</span>
+<span class="m-tag">BOOKS · COFFEE · CULTURE</span>
+<p class="mt-3 small">Niezależna księgarnia z kawiarnią.</p>
+</div>
+<div class="col-6 col-md-2">
+<h2 class="m-eyebrow m-page-inline-1">
+            Odkrywaj
+          </h2>
+<ul class="list-unstyled small">
+<li class="py-1">
+<a href="ksiazki.html">Książki</a>
+</li>
+<li class="py-1">
+<a href="kawiarnia.html">Kawiarnia</a>
+</li>
+<li class="py-1">
+<a href="wydarzenia.html">Wydarzenia</a>
+</li>
+<li class="py-1">
+<a href="blog.html">Journal</a>
+</li>
+<li class="py-1">
+<a href="o-nas.html">O nas</a>
+</li>
+<li class="py-1">
+<a href="kontakt.html">Kontakt</a>
+</li><li class="py-1"><a href="polityka-prywatnosci.html">Polityka prywatności</a></li>
+<li class="py-1"><a href="404.html">Strona 404</a></li></ul>
+</div>
+<div class="col-6 col-md-3">
+<h2 class="m-eyebrow m-page-inline-2">
+            Godziny
+          </h2>
+<ul class="list-unstyled small m-footer-hours">
+<li class="d-flex justify-content-between py-1">
+<span>Pon–Pt</span>
+<span>8:00–20:00</span>
+</li>
+<li class="d-flex justify-content-between py-1">
+<span>Sobota</span>
+<span>9:00–20:00</span>
+</li>
+<li class="d-flex justify-content-between py-1">
+<span>Niedziela</span>
+<span>10:00–18:00</span>
+</li>
+</ul>
+</div>
+<div class="col-12 col-md-3 small">
+<h2 class="m-eyebrow m-page-inline-3">
+            Adres
+          </h2>
+<address class="mb-2 m-page-inline-4">MARGINES — księgarnia z kawiarnią<br/>ul. Przykładowa 12<br/>00-001 Warszawa, Polska</address>
+<p class="mb-2"><a href="kontakt.html#dojazd">Zobacz lokalizację i dojazd</a></p>
+<p class="mb-0">
+<a href="mailto:kontakt@margines.example">
+              kontakt@margines.example
+            </a>
+</p>
+</div>
+</div>
+<p class="small mt-5 mb-0 opacity-75">© 2026 MARGINES</p>
+</div>
+</footer>
+<div id="m-overlays"></div><div aria-live="polite" id="m-toast" role="status"></div><script src="js/data.js"></script><script src="js/script.js"></script>
+<script>
+(function(){'use strict';
+const money=n=>new Intl.NumberFormat('pl-PL',{style:'currency',currency:'PLN'}).format(n);
+const deliveryPrices={locker:12.99,courier:16.99,pickup:0};
+function getItems(){
+  // Dokładny format koszyka MARGINES: [{id, qty}] i katalog w js/data.js.
+  const products=(window.MARGINES_DATA && window.MARGINES_DATA.products)||[];
+  let stored=[];
+  try { stored=JSON.parse(localStorage.getItem('margines-cart')||'[]'); } catch(e) { return []; }
+  if(!Array.isArray(stored)) return [];
+  return stored.map(line=>{
+    const product=products.find(p=>p.id===line.id);
+    const qty=Number(line.qty);
+    if(!product || !Number.isInteger(qty) || qty<=0 || !product.available) return null;
+    return {id:product.id,name:product.title,qty:qty,price:Number(product.price)};
+  }).filter(Boolean);
+}
+const items=getItems(),itemsEl=document.getElementById('checkout-items'),button=document.getElementById('place-order'),form=document.getElementById('checkout-form');
+const subtotal=items.reduce((sum,x)=>sum+x.qty*x.price,0);
+function delivery(){return document.querySelector('input[name="delivery"]:checked').value}
+function update(){const mode=delivery(),cost=deliveryPrices[mode];document.getElementById('shipping').textContent=money(cost);document.getElementById('subtotal').textContent=money(subtotal);document.getElementById('grand-total').textContent=money(subtotal+cost);const address=document.getElementById('address-fields'),locker=document.getElementById('locker-fields');address.classList.toggle('checkout-hidden',mode==='pickup');locker.classList.toggle('checkout-hidden',mode!=='locker');address.querySelectorAll('[required]').forEach(el=>el.disabled=mode==='pickup');locker.querySelectorAll('[required]').forEach(el=>el.disabled=mode!=='locker');const payPickup=document.querySelector('input[name="payment"][value="pickup"]');payPickup.disabled=mode!=='pickup';payPickup.closest('label').style.opacity=mode==='pickup'?'1':'.5';if(payPickup.checked&&payPickup.disabled)document.querySelector('input[name="payment"][value="blik"]').checked=true;}
+if(items.length){itemsEl.replaceChildren();for(const x of items){const row=document.createElement('div');row.className='checkout-item';const a=document.createElement('span');a.textContent=x.name+' × '+x.qty;const b=document.createElement('span');b.textContent=money(x.price*x.qty);row.append(a,b);itemsEl.append(row)}button.disabled=false;document.getElementById('checkout-notice').textContent='Wersja demonstracyjna — nie pobieramy płatności.'}
+else{itemsEl.textContent='Koszyk jest pusty lub nie udało się odczytać produktów. Dodaj książki do koszyka i wróć do zamówienia.';document.getElementById('checkout-notice').textContent='Nie można potwierdzić pustego zamówienia.'}
+document.querySelectorAll('input[name="delivery"]').forEach(el=>el.addEventListener('change',update));update();
+form.addEventListener('submit',e=>{e.preventDefault();if(!items.length)return;if(!form.reportValidity())return;const details=document.getElementById('checkout-success-details');details.textContent='Podsumowanie: '+items.reduce((s,x)=>s+x.qty,0)+' szt. · '+money(subtotal+deliveryPrices[delivery()])+'.';document.getElementById('checkout-content').classList.add('checkout-hidden');document.getElementById('checkout-success').classList.remove('checkout-hidden');window.scrollTo({top:0,behavior:'smooth'});});
+})();
+</script><script defer="True" src="js/checkout-extensions.js"></script></body></html>
